@@ -6,56 +6,75 @@
     <title>Accueil - Komondi</title>
     <style>
         body {
-            text-align: center;
             font-family: Arial, sans-serif;
             background: #f5f7fa;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
+            text-align: center;
         }
         header {
+            background: #007BFF;
+            color: white;
+            padding: 30px 10px;
             font-size: 28px;
-            color: #007BFF;
-            margin-top: 20px;
-        }
-        img {
-            max-width: 90%;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         nav {
-            margin: 30px 0;
-            font-size: 18px;
+            margin: 20px 0;
         }
         nav a {
             text-decoration: none;
             color: #007BFF;
             margin: 0 15px;
+            font-weight: bold;
         }
-        nav a:hover {
-            text-decoration: underline;
+        nav a:hover { text-decoration: underline; }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+        .images img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            margin: 40px 10px;
+            color: #666;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .images img { max-width: 45%; }
+        }
+        @media (max-width: 480px) {
+            .images img { max-width: 90%; }
         }
     </style>
 </head>
 <body>
     <header>Bienvenue sur Komondi</header>
 
-    <!-- الصور -->
-    <img src="images/image1.png" alt="Image 1">
-<img src="images/image2.png" alt="Image 2">
-<img src="images/image3.png" alt="Image 3">
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+        <a href="contactez-nous.html">Contactez-nous</a>
+    </nav>
 
+    <div class="images">
+        <img src="images/image1.png" alt="Image 1">
+        <img src="images/image2.png" alt="Image 2">
+        <img src="images/image3.png" alt="Image 3">
+    </div>
 
-    <!-- روابط التنقل -->
-   
-        <nav>
-  <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-  <a href="contactez-nous.html">Contactez-nous</a>
-</nav>
-
-    
+    <footer>
+        © 2025 Komondi. Tous droits réservés.
+    </footer>
 </body>
 </html>
-
-
