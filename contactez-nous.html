@@ -1,21 +1,28 @@
-<div style="font-family:'Cairo',sans-serif;direction:rtl;text-align:right;background:#fff;padding:35px;border-radius:14px;box-shadow:0 3px 12px rgba(0,0,0,0.1);max-width:900px;margin:auto;line-height:1.7;min-height:90vh;">
-  <h2 style="text-align:center;color:#007BFF;margin-bottom:25px;">📧 اتصل بنا - Contactez-nous</h2>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا | Komondi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-  <form id="contactForm">
-    <!-- الاسم الكامل -->
-    <label for="name" style="font-weight:bold;">الاسم الكامل / Nom complet *</label><br>
-    <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل / Entrez votre nom complet"
-      style="width:100%;padding:12px;margin:8px 0 16px;border:1px solid #ccc;border-radius:8px;font-size:15px;">
+<header class="page-header">
+  <h1>📧 اتصل بنا - Contactez-nous</h1>
+</header>
 
-    <!-- البريد الإلكتروني -->
-    <label for="email" style="font-weight:bold;">البريد الإلكتروني / Adresse e-mail *</label><br>
-    <input type="email" id="email" name="email" required placeholder="example@gmail.com"
-      style="width:100%;padding:12px;margin:8px 0 16px;border:1px solid #ccc;border-radius:8px;font-size:15px;">
+<main class="contact-container">
+  <form id="contactForm" class="contact-form">
 
-    <!-- نوع المستخدم -->
-    <label for="userType" style="font-weight:bold;">نوع المستخدم / Type d’utilisateur *</label><br>
-    <select id="userType" name="userType" required
-      style="width:100%;padding:12px;margin:8px 0 16px;border:1px solid #ccc;border-radius:8px;font-size:15px;">
+    <label for="name">الاسم الكامل / Nom complet *</label>
+    <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل / Entrez votre nom complet">
+
+    <label for="email">البريد الإلكتروني / Adresse e-mail *</label>
+    <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+
+    <label for="userType">نوع المستخدم / Type d’utilisateur *</label>
+    <select id="userType" name="userType" required>
       <option value="">اختر / Sélectionnez</option>
       <option value="distributor">موزع / Fournisseur</option>
       <option value="shop_owner">صاحب محل / Commerçant</option>
@@ -23,10 +30,8 @@
       <option value="other">مستخدم آخر / Autre utilisateur</option>
     </select>
 
-    <!-- الموضوع -->
-    <label for="subject" style="font-weight:bold;">الموضوع / Sujet *</label><br>
-    <select id="subject" name="subject" required
-      style="width:100%;padding:12px;margin:8px 0 16px;border:1px solid #ccc;border-radius:8px;font-size:15px;">
+    <label for="subject">الموضوع / Sujet *</label>
+    <select id="subject" name="subject" required>
       <option value="">اختر / Sélectionnez</option>
       <option value="support">دعم فني / Support technique</option>
       <option value="privacy">استفسار حول الخصوصية / Confidentialité</option>
@@ -38,73 +43,57 @@
       <option value="other">موضوع آخر / Autre sujet</option>
     </select>
 
-    <!-- إشعار حذف الحساب -->
-    <div id="deleteNotice" style="display:none;background:#fff8e1;border:1px solid #ffecb3;color:#7a5f00;padding:12px;border-radius:8px;margin-bottom:16px;">
-      ⚠️ سيتم معالجة طلب حذف الحساب خلال <strong>7 إلى 30 يومًا</strong> لضمان عدم تأثر المستخدمين الآخرين الذين تتعامل معهم.
+    <div id="deleteNotice" class="alert-warning">
+      ⚠️ سيتم معالجة طلب حذف الحساب خلال <strong>7 إلى 30 يومًا</strong>.
     </div>
 
-    <!-- الرسالة -->
-    <label for="message" style="font-weight:bold;">الرسالة / Message *</label><br>
-    <textarea id="message" name="message" required placeholder="اكتب رسالتك / Écrivez votre message..."
-      style="width:100%;padding:12px;margin:8px 0 16px;border:1px solid #ccc;border-radius:8px;font-size:15px;height:120px;"></textarea>
+    <label for="message">الرسالة / Message *</label>
+    <textarea id="message" name="message" required placeholder="اكتب رسالتك / Écrivez votre message..."></textarea>
 
-    <!-- زر الإرسال -->
-    <button type="submit"
-      style="background:linear-gradient(90deg,#0069ff,#00aaff);color:white;border:none;padding:14px 20px;border-radius:8px;font-size:16px;cursor:pointer;width:100%;font-weight:bold;">
-      إرسال الرسالة / Envoyer le message
-    </button>
+    <button type="submit">إرسال الرسالة / Envoyer le message</button>
 
-    <!-- ملاحظة زمن الرد -->
-    <p style="background:#f8f9fa;border:1px solid #e0e0e0;padding:12px;border-radius:8px;margin-top:25px;text-align:center;font-size:14px;color:#333;">
+    <p class="note">
       ⏰ يتم الرد على الرسائل خلال <strong>24 إلى 48 ساعة</strong>.<br>
       Les réponses sont envoyées sous <strong>24 à 48 heures</strong>.
     </p>
   </form>
 
-  <!-- نافذة تأكيد أنيقة -->
-  <div id="successOverlay" style="
-    display:none;position:fixed;top:0;left:0;width:100%;height:100%;
-    background:rgba(0,0,0,0.5);backdrop-filter:blur(2px);
-    justify-content:center;align-items:center;z-index:9999;
-  ">
-    <div style="
-      background:white;padding:30px 40px;border-radius:20px;
-      text-align:center;box-shadow:0 5px 15px rgba(0,0,0,0.2);
-      animation:popupFade 0.6s ease;
-    ">
-      <div style="font-size:45px;">✅</div>
-      <h3 style="color:#155724;margin:10px 0 0;">تم إرسال الرسالة بنجاح!</h3>
-      <p style="color:#555;font-size:14px;">Merci ! Votre message a été envoyé avec succès.</p>
+  <div id="successOverlay" class="overlay">
+    <div class="popup">
+      <div class="emoji">✅</div>
+      <h3>تم إرسال الرسالة بنجاح!</h3>
+      <p>Merci ! Votre message a été envoyé avec succès.</p>
     </div>
   </div>
+</main>
 
-  <style>
-    @keyframes popupFade {
-      0% {opacity:0; transform:scale(0.8);}
-      100% {opacity:1; transform:scale(1);}
-    }
-  </style>
+<footer>
+  <a href="index.html" class="back-btn">⬅️ العودة إلى الصفحة الرئيسية</a>
+  <p>© 2025 Komondi. All rights reserved.</p>
+</footer>
 
-  <script>
-    const subjectSelect = document.getElementById('subject');
-    const deleteNotice = document.getElementById('deleteNotice');
-    const successOverlay = document.getElementById('successOverlay');
+<script>
+  const subjectSelect = document.getElementById('subject');
+  const deleteNotice = document.getElementById('deleteNotice');
+  const successOverlay = document.getElementById('successOverlay');
 
-    subjectSelect.addEventListener('change', () => {
-      deleteNotice.style.display = (subjectSelect.value === 'delete_account') ? 'block' : 'none';
-    });
+  subjectSelect.addEventListener('change', () => {
+    deleteNotice.style.display = (subjectSelect.value === 'delete_account') ? 'block' : 'none';
+  });
 
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formAction = "https://script.google.com/macros/s/AKfycbwKY-P_VhMp2Z5Y7p7lxGgZIFNMAcweqsPDNQl-TFJUdxDg-VHYCtW-EIaGmHLz22Zx/exec";
-      const formData = new FormData(this);
-      fetch(formAction, { method: 'POST', body: formData, mode: 'no-cors' })
-        .then(() => {
-          this.reset();
-          deleteNotice.style.display = 'none';
-          successOverlay.style.display = 'flex';
-          setTimeout(() => successOverlay.style.display = 'none', 3000);
-        });
-    });
-  </script>
-</div>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formAction = "https://script.google.com/macros/s/AKfycbwKY-P_VhMp2Z5Y7p7lxGgZIFNMAcweqsPDNQl-TFJUdxDg-VHYCtW-EIaGmHLz22Zx/exec";
+    const formData = new FormData(this);
+    fetch(formAction, { method: 'POST', body: formData, mode: 'no-cors' })
+      .then(() => {
+        this.reset();
+        deleteNotice.style.display = 'none';
+        successOverlay.style.display = 'flex';
+        setTimeout(() => successOverlay.style.display = 'none', 3000);
+      });
+  });
+</script>
+
+</body>
+</html>
