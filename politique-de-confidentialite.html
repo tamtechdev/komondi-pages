@@ -5,11 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | Komondi</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ✅ تصحيح الاتجاه العربي */
+    #arabic {
+      direction: rtl;
+      text-align: right;
+      font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+    }
+
+    /* ✅ تحسين عرض العناوين داخل القسم العربي */
+    #arabic h2, 
+    #arabic h3 {
+      border-left: none;
+      border-right: 4px solid #007BFF;
+      padding-right: 10px;
+      color: #007BFF;
+    }
+
+    /* ✅ جعل الروابط تظهر بالشكل الصحيح */
+    #arabic a {
+      direction: ltr;
+      display: inline-block;
+    }
+
+    /* ✅ تحسين المسافات في الهواتف */
+    @media (max-width: 600px) {
+      #arabic {
+        font-size: 15px;
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 
- <body>
+<body>
 
 <header>
+  <img src="images/logo_app.png" alt="Komondi Logo" class="logo">
   <h1>Privacy Policy – Politique de Confidentialité – سياسة الخصوصية</h1>
 </header>
 
@@ -182,6 +214,7 @@
 
 </body>
 </html>
+
 
 
 
