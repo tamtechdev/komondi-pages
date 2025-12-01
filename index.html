@@ -45,7 +45,7 @@
       left: 15px;
       font-size: 30px;
       cursor: pointer;
-      z-index: 999;
+      z-index: 2000;
       color: #fff;
     }
 
@@ -61,22 +61,20 @@
       flex-direction: column;
       gap: 20px;
       transition: 0.35s ease;
-      z-index: 1001;
+      z-index: 1999;
     }
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100%;
-      background: #1e88e5;
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      transition: 0.3s;
-      z-index: 998;
+
+    .drawer.open {
+      left: 0;
     }
+
     .drawer a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    } {
       color: #fff;
       text-decoration: none;
       font-size: 18px;
