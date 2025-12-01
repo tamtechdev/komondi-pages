@@ -1,0 +1,11 @@
+# robots.txt for Komondi.net
+
+User-agent: *
+Allow: /
+
+# رابط خريطة الموقع (Sitemap)
+Sitemap: https://komondi.net/sitemap.xml
+
+# منع أي ملفات غير مهمة من الزحف (اختياري)
+Disallow: /css/
+
