@@ -285,4 +285,51 @@ footer {
   display: block;
   margin: 10px auto;
 }
+/* ---------- Mobile Drawer Menu ---------- */
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -320px;      /* إخفاء كامل خارج الشاشة */
+  width: 290px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transition: left 0.35s ease-in-out;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.drawer.open {
+  left: 0 !important;   /* تظهر عند الضغط على الزر */
+}
+
+.drawer a {
+  display: block;
+  padding: 14px 10px;
+  color: #007bff;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+}
+
+.drawer a:hover {
+  background: #f1f1f1;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #007bff;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
 
