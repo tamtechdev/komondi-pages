@@ -3,36 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - Komondi</title>
+  <title>Komondi - La plateforme qui connecte distributeurs et commerçants</title>
+  <meta name="description" content="Komondi connecte distributeurs, fournisseurs et commerçants. Présentez vos produits, recevez des commandes et gérez vos ventes facilement depuis votre smartphone.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333;}
+    header {background: #1e88e5; color: #fff; text-align: center; padding: 40px 20px;}
+    header .logo {max-width: 160px; margin-bottom: 10px;}
+    .nav-container {display: flex; justify-content: center; gap: 15px; padding: 20px; background: #fff;}
+    .nav-button {padding: 10px 18px; background: #1e88e5; color: #fff; border-radius: 6px; text-decoration: none; font-weight: bold;}
+    .hero {padding: 40px 20px; text-align: center; background: #fff;}
+    .hero h2 {font-size: 28px; margin-bottom: 15px;}
+    .hero p {font-size: 18px; max-width: 700px; margin: auto;}
+    .app-buttons {margin-top: 20px;}
+    .app-buttons a img {width: 180px;}
+    .features {padding: 40px 20px; background: #f1f1f1;}
+    .features h2 {text-align: center; margin-bottom: 30px; font-size: 26px;}
+    .feature-box {background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);}    
+    .gallery img {width: 100%; border-radius: 10px; margin-bottom: 15px;}
+    footer {text-align: center; padding: 20px; background: #1e88e5; color: #fff; margin-top: 40px;}
+      /* --- Responsive Mobile Optimisation --- */
+    @media (max-width: 600px) {
+      header {padding: 30px 15px;}
+      header h1 {font-size: 22px;}
+      .nav-container {flex-direction: column; gap: 10px;}
+      .nav-button {width: 100%; text-align: center; padding: 12px;}
+      .hero h2 {font-size: 22px;}
+      .hero p {font-size: 16px;}
+      .app-buttons a img {width: 150px;}
+      .feature-box {padding: 15px;}
+      .features h2 {font-size: 22px;}
+      .gallery h2 {font-size: 22px !important;}
+    }
+      /* Drawer Menu */
+    .menu-icon {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 999;
+      color: #fff;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #1e88e5;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: 0.3s;
+      z-index: 998;
+    }
+    .drawer a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    .drawer .close-btn {
+      margin-top: 20px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .drawer.open {
+      left: 0;
+    }
+
+    @media (max-width: 700px) {
+      .menu-icon {display: block;}
+      .nav-container {display: none;}
+    }
+
+  </style>
 </head>
 <body>
 
-  <!-- الهيدر -->
+  <!-- Menu Drawer -->
+  <div id="drawer" class="drawer">
+    <a href="index.html">Accueil</a>
+    <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+    <a href="contactez-nous.html">Contactez-nous</a>
+    <span class="close-btn" onclick="toggleDrawer()">✕ Fermer</span>
+  </div>
+
+  <!-- Bouton Menu Mobile -->
+  <div class="menu-icon" onclick="toggleDrawer()">☰</div>
+
   <header>
     <img src="images/logo_komondi_blanc_194.png" alt="Komondi Logo" class="logo">
-    <h1>Bienvenue sur Komondi</h1>
+    <h1>Komondi – Connectez distributeurs et commerçants facilement</h1>
   </header>
 
-  <!-- أزرار التنقل -->
   <div class="nav-container">
     <a href="index.html" class="nav-button">Accueil</a>
     <a href="politique-de-confidentialite.html" class="nav-button">Politique de confidentialité</a>
     <a href="contactez-nous.html" class="nav-button">Contactez-nous</a>
   </div>
 
-  <!-- معرض الصور -->
-  <section>
-    <img src="images/image1.png" alt="Image 1" style="width:100%;border-radius:10px;margin-bottom:15px;">
-    <img src="images/image2.png" alt="Image 2" style="width:100%;border-radius:10px;margin-bottom:15px;">
-    <img src="images/image3.png" alt="Image 3" style="width:100%;border-radius:10px;">
+  <!-- SECTION HERO -->
+  <section class="hero">
+    <h2>Vendez, organisez et livrez depuis votre téléphone</h2>
+    <p>Komondi aide les distributeurs à vendre et livrer plus facilement. Présentez vos produits, recevez des commandes et gérez vos ventes sans déplacements inutiles.</p>
+
+    <div class="app-buttons">
+      <a href="#"><img src="images/googleplay.png" alt="Télécharger sur Google Play"></a>
+    </div>
   </section>
 
-  <!-- الفوتر -->
+  <!-- SECTION FEATURES -->
+  <section class="features">
+    <h2>Pourquoi utiliser Komondi ?</h2>
+
+    <div class="feature-box">
+      <h3>📦 Pour les distributeurs</h3>
+      <p>Gérez vos produits, vos commandes et vos clients directement depuis votre smartphone. Ajoutez vos produits avec photos, prix et stock, recevez et confirmez les commandes, et organisez vos livraisons facilement.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🛍️ Pour les commerçants</h3>
+      <p>Parcourez les catalogues des distributeurs près de chez vous, commandez vos produits en quelques clics, suivez vos livraisons et gérez vos approvisionnements sans perdre de temps.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>📊 Statistiques et gestion avancée</h3>
+      <p>Komondi vous offre une vue complète sur vos ventes, vos produits et vos clients, grâce à des statistiques détaillées et un suivi en temps réel.</p>
+    </div>
+  </section>
+
+  <!-- SECTION GALLERY -->
+  <section class="gallery" style="padding: 40px 20px;">
+    <h2 style="text-align:center; margin-bottom: 20px;">Aperçu de l'application</h2>
+    <img src="images/image1.png" alt="Capture 1">
+    <img src="images/image2.png" alt="Capture 2">
+    <img src="images/image3.png" alt="Capture 3">
+  </section>
+
   <footer>
     © 2025 Komondi. Tous droits réservés.
   </footer>
 
+<script>
+    function toggleDrawer() {
+      document.getElementById('drawer').classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
-
