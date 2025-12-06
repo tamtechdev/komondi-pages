@@ -1,12 +1,12 @@
 # robots.txt for Komondi.net
-
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
 
-# رابط خريطة الموقع (Sitemap)
-Sitemap: https://www.komondi.net//sitemap.xml
+# Content signals for AI
+Content-signal: search=yes,ai-train=no
 
-# منع أي ملفات غير مهمة من الزحف (اختياري)
-Disallow: /css/
-
-
+# Sitemap URL
+Sitemap: https://www.komondi.net/sitemap.xml
