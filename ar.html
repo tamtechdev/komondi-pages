@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>كوموندي – خلّي البيع والطلبيات  يجوك حتى للتليفون</title>
+<meta name="description" content="كوموندي تطبيق جزائري يربط الموزعين بالتجار. أعرض منتجاتك ونظّم خدمتك بسهولة من هاتفك.">
+<div class="lang-switch" style="position:absolute; top:20px; right:20px;">
+  <a href="index.html" style="margin-left:10px;">🇫🇷 Français</a>
+  <a href="ar.html" style="margin-left:10px;">🇩🇿 العربية</a>
+</div>
+<!-- Google Fonts: Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Animations CSS -->
+<style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+     .lang-switch a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(0,0,0,0.2);
+      padding: 6px 12px;
+      border-radius: 8px;
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+    .lang-switch a:hover {
+      background: rgba(0,0,0,0.4);
+    }
+
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: #f7f8fc;
+  color: #333;
+  direction: rtl;
+}
+ 
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+
+
+}
+
+
+
+header img {
+  max-width: 160px;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1s forwards 0.3s;
+}
+
+header p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1s forwards 0.6s;
+}
+
+header .btn {
+  display: inline-block;
+  background: #fff;
+  color: #1e88e5;
+  padding: 16px 34px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1s forwards 0.9s;
+}
+
+header .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* ضع هنا مكان ظهور الزر */
+  z-index: 999; /* تأكد أنه فوق كل العناصر */
+}
+
+.lang-switch a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0,0,0,0.2);
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.lang-switch a:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+
+/* Sections */
+section {
+  padding: 70px 20px;
+  background: #fff;
+  overflow: hidden;
+}
+
+section:nth-child(even) {
+  background: #f9fbff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1e88e5;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Cards */
+.steps, .features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* Gallery */
+.gallery img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 1s forwards;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.cta p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* الزر */
+.btn-download {
+  display: inline-block;
+  background: #fff;
+  color: #1e88e5;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #e3f2fd;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+
+/* Footer */
+footer {
+  background: #1565c0;
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 15px;
+}
+
+/* Animations Keyframes */
+@keyframes fadeInUp {
+  0% {opacity:0; transform:translateY(30px);}
+  100% {opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeInDown {
+  0% {opacity:0; transform:translateY(-20px);}
+  100% {opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeIn {
+  0% {opacity:0; transform:scale(0.95);}
+  100% {opacity:1; transform:scale(1);}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {font-size: 26px;}
+  header p {font-size: 18px;}
+  h2 {font-size: 26px;}
+}
+</style>
+</head>
+
+<body>
+ <div class="lang-switch">
+    <a href="index.html">🇫🇷 Français</a>
+    <a href="ar.html">🇩🇿 العربية</a>
+  </div>
+
+
+<!-- Header -->
+<header>
+  <img src="images/logo_app.png" alt="Komondi Logo">
+  <h1>خلّي البيع والطلبيات يجوك حتى للتليفون</h1>
+  <p>كوموندي يربط الموزعين وتجار الجملة بالتجار للبيع بالتجزئة، بسرعة و باحترافية وبلا تعب</p>
+  <a class="btn" href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi">
+    تحميل التطبيق
+  </a>
+</header>
+
+<!-- About -->
+<section>
+  <div class="container">
+    <h2>ما هو هو كوموندي؟</h2>
+    <p>
+      كوموندي هو تطبيق جزائري يخليك تبيع وتعرض السلع بكل سهولة.
+      الموزع يعرض منتجاته، والتاجر يطلب مباشرة من هاتفه، والطلبات
+      تكون منظمة والتوصيل يكون واضح.
+    </p>
+  </div>
+</section>
+
+<!-- How it works -->
+<section>
+  <div class="container">
+    <h2>كيفاش يخدم؟</h2>
+    <div class="steps">
+      <div class="card" style="animation-delay:0.2s;">
+        <h3>📦 الموزع</h3>
+        <p>يضيف المنتجات في التطبيق،ويعرضها على التاجر عن طريق مندوب المبيعات او تاجرالتجزئة يشوف المنتجات ويطلبها مباشرة من هاتفه ومن محله،يشوف الأسعار والستوك بالصور</p>
+      </div>
+      <div class="card" style="animation-delay:0.4s;">
+        <h3>🛒 التاجر</h3>
+        <p>يشوف الموزعين لي قريبين ليه ويطلب المتابعة من الموزع بسهولة ،يقدر يشوف السلع ويدير الطلبيات مباشرة من هاتفه ،الطلبيات توصل للموزع ،ويوزعها ،كل شيء يفوت بسهولة</p>
+      </div>
+      <div class="card" style="animation-delay:0.6s;">
+        <h3>🚚 التنظيم</h3>
+        <p>تأكيد الطلبات وتنظيم التوصيل بلا صداع وكل شيء يكون باحترافية عالية </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features for Traders -->
+<section>
+  <div class="container">
+    <h2>مميزات للتجار</h2>
+    <div class="features">
+      <div class="card" style="animation-delay:0.2s;">✔ تطلب وقت لي تحب</div>
+      <div class="card" style="animation-delay:0.4s;">✔ تشوف الأسعار قبل الطلب</div>
+      <div class="card" style="animation-delay:0.6s;">✔ ما كاش تنقل ولا تعب</div>
+      <div class="card" style="animation-delay:0.8s;">✔ تتبع الطلبات بسهولة</div>
+    </div>
+  </div>
+</section>
+
+<!-- Features for Distributors -->
+<section>
+  <div class="container">
+    <h2>مميزات للموزعين</h2>
+    <div class="features">
+      <div class="card" style="animation-delay:0.2s;">✔ تزيد زبائنك</div>
+      <div class="card" style="animation-delay:0.4s;">✔ تنظم الطلبات والتوصيل</div>
+      <div class="card" style="animation-delay:0.6s;">✔ إحصائيات واضحة</div>
+      <div class="card" style="animation-delay:0.8s;">✔ خدمة أسرع وأذكى</div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery">
+  <div class="container">
+    <h2>صور من التطبيق</h2>
+    <img src="images/image1.png" alt="Komondi App">
+    <img src="images/image2.png" alt="Komondi App">
+    <img src="images/image3.png" alt="Komondi App">
+  </div>
+</section>
+<section class="cta">
+  <h2>جرب كوموندي مجاناً لمدة شهرين!</h2>
+  <h2>راك حاب تطوّر خدمتك؟</h2>
+  <p>استفد من كل ميزات التطبيق بدون دفع أي شيء، جرّبه الآن وابدأ في تنظيم مبيعاتك بسهولة.</p>
+  <p>كوموندي هو الحل لي يسهّل عليك كلش</p>
+  <a class="btn-download" href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" target="_blank">
+    📱 جرّب التطبيق الآن
+  </a>
+</section>
+
+
+
+<!-- Contact Section -->
+<section>
+  <div class="container">
+    <h2>اتصل بنا</h2>
+    <p>لو عندك أي سؤال أو تحتاج مساعدة، تقدر تتواصل معنا بسهولة عبر البريد أو واتساب.</p>
+    
+    <div class="features" style="justify-content:center;">
+      <div class="card" style="animation-delay:0.2s;">
+        📧 البريد الإلكتروني<br>
+        <a href="mailto:support.komondi.net" style="color:#1e88e5; text-decoration:none;">support.komondi.net</a>
+      </div>
+      <div class="card" style="animation-delay:0.4s;">
+        📱 واتساب<br>
+       <a href="https://wa.me/213551682179" target="_blank" style="color:#1e88e5; text-decoration:none;" dir="ltr">
+  +213 551 68 21 79
+</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+  © 2025 Komondi – جميع الحقوق محفوظة
+</footer>
+
+</body>
+</html>
