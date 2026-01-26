@@ -5,8 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.dzstartup.komondi",
       "sha256_cert_fingerprints": [
-        "B5:28:97:C0:32:42:A6:68:E5:2E:CD:FA:91:A5:BA:8E:58:73:81:F5:4F:FF:4F:26:63:24:81:DE:4F:A7:B3:C5",
-        "C9:DC:F7:2A:A1:FA:E1:34:2C:74:47:DD:8C:9F:CE:E1:65:7E:AB:E1:26:5F:2D:0B:91:6E:8C:D0:16:26:38:0D"
+        "C9:DC:F7:2A:A1:FA:E1:34:2C:74:47:DD:8C:9F:CE:E1:65:7E:AB:E1:26:5F:2D:0B:91:6E:8C:D0:16:26:38:0D",
+        "B5:28:97:C0:32:42:A6:68:E5:2E:CD:FA:91:A5:BA:8E:58:73:81:F5:4F:FF:4F:26:63:24:81:DE:4F:A7:B3:C5"
       ]
     }
   }
