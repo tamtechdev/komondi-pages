@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فتح Komondi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            color: white;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #4CAF50;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 30px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+        <h1>⚡ جاري فتح تطبيق Komondi</h1>
+        <p>إذا لم يفتح التطبيق تلقائياً، سيتم توجيهك لتحميله...</p>
+    </div>
+
+    <script>
+        // 1. استخراج ID الموزع من الرابط
+        function getDistributorId() {
+            // من query parameter: ?id=ABC123
+            const urlParams = new URLSearchParams(window.location.search);
+            let id = urlParams.get('id');
+            
+            // أو من hash: #ABC123
+            if (!id) {
+                id = window.location.hash.substring(1);
+            }
+            
+            return id;
+        }
+        
+        // 2. فتح التطبيق
+        function openApp() {
+            const distributorId = getDistributorId();
+            
+            if (distributorId) {
+                // رابط فتح التطبيق مع ID الموزع
+                const appLink = 'komondi://distributor/' + distributorId;
+                window.location.href = appLink;
+                
+                // 3. إذا فشل بعد 1 ثانية، اذهب للمتجر
+                setTimeout(() => {
+                    if (!document.hidden) {
+                        window.location.href = 
+                            'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
+                    }
+                }, 1000);
+            } else {
+                // إذا لم يكن هناك ID، اذهب مباشرة للمتجر
+                setTimeout(() => {
+                    window.location.href = 
+                        'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
+                }, 500);
+            }
+        }
+        
+        // تشغيل عند تحميل الصفحة
+        window.onload = function() {
+            setTimeout(openApp, 500);
+        };
+    </script>
+</body>
+</html>
