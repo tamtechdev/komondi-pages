@@ -58,10 +58,10 @@
     <script>
         // 1. استخراج ID الموزع من الرابط
       function getDistributorId() {
-    const path = window.location.pathname;
-    const parts = path.split('/');
-    return parts.length > 2 ? parts[2] : null;
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
 }
+
         // 2. فتح التطبيق
         function openApp() {
             const distributorId = getDistributorId();
