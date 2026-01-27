@@ -65,28 +65,25 @@
 
         // 2. فتح التطبيق
        function openApp() {
-    const distributorId = getDistributorId();
-
-    if (distributorId) {
-        // رابط HTTPS الذي التطبيق يعرف كيف يفتحه
-        const appLink = 'https://komondi.net/d/' + distributorId;
-        window.location.href = appLink;
-
-        // إذا لم يفتح التطبيق بعد 1 ثانية، اذهب للمتجر
-        setTimeout(() => {
-            if (!document.hidden) {
-                window.location.href = 
-                    'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
+            const distributorId = getDistributorId();
+            
+            if (distributorId) {
+                // رابط فتح التطبيق مع ID الموزع
+                const appLink = 'komondi://distributors/' + distributorId;
+                window.location.href = appLink;
+                
+                // 3. إذا فشل بعد 1 ثانية، اذهب للمتجر
+                setTimeout(() => {
+                    if (!document.hidden) {
+                        window.location.href = 
+                            'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
+                    }
+                }, 1000);
+            } else {
+                // إذا لم يكن هناك ID، اذهب مباشرة للمتجر
+               
             }
-        }, 1000);
-    } else {
-        // إذا لم يكن هناك ID، اذهب مباشرة للمتجر
-        window.location.href = 
-            'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
-    }
-}
-
-        
+        }        
         // تشغيل عند تحميل الصفحة
         window.onload = function() {
             setTimeout(openApp, 500);
