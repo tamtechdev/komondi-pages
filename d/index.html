@@ -57,10 +57,11 @@
 
     <script>
         // 1. استخراج ID الموزع من الرابط
-      function getDistributorId() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('id');
+     function getDistributorId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('id'); // يقرأ الـ query parameter
 }
+
 
         // 2. فتح التطبيق
         function openApp() {
