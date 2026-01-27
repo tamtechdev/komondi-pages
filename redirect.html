@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,14 +25,8 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
+        h1 { font-size: 28px; margin-bottom: 20px; }
+        p { font-size: 18px; opacity: 0.9; }
         .loader {
             border: 5px solid #f3f3f3;
             border-top: 5px solid #4CAF50;
@@ -56,45 +50,36 @@
     </div>
 
     <script>
-        // 1. استخراج ID الموزع من الرابط
+        // قراءة ID الموزع من query parameter
         function getDistributorId() {
-            // من query parameter: ?id=ABC123
-            const urlParams = new URLSearchParams(window.location.search);
-            let id = urlParams.get('id');
-            
-            // أو من hash: #ABC123
-            if (!id) {
-                id = window.location.hash.substring(1);
-            }
-            
-            return id;
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
         }
-        
-        // 2. فتح التطبيق
+
         function openApp() {
             const distributorId = getDistributorId();
-            
+
             if (distributorId) {
-                // رابط فتح التطبيق مع ID الموزع
-                const appLink = 'komondi://distributor/' + distributorId;
+                // رابط التطبيق
+                const appLink = 'komondi://distributors/' + distributorId;
+
+                // تجربة فتح التطبيق
                 window.location.href = appLink;
-                
-                // 3. إذا فشل بعد 1 ثانية، اذهب للمتجر
+
+                // إذا لم يفتح التطبيق بعد 1 ثانية، اذهب للمتجر
                 setTimeout(() => {
                     if (!document.hidden) {
-                        window.location.href = 
+                        window.location.href =
                             'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
                     }
                 }, 1000);
             } else {
-                // إذا لم يكن هناك ID، اذهب مباشرة للمتجر
-                setTimeout(() => {
-                    window.location.href = 
-                        'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
-                }, 500);
+                // إذا لم يوجد ID، اذهب مباشرة للمتجر
+                window.location.href =
+                    'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
             }
         }
-        
+
         // تشغيل عند تحميل الصفحة
         window.onload = function() {
             setTimeout(openApp, 500);
