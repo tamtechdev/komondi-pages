@@ -56,29 +56,30 @@
             return params.get('id');
         }
 
-        function openApp() {
-            const distributorId = getDistributorId();
-
-            if (distributorId) {
-                // رابط التطبيق
-                const appLink = 'komondi://distributors/' + distributorId;
-
-                // تجربة فتح التطبيق
-                window.location.href = appLink;
-
-                // إذا لم يفتح التطبيق بعد 1 ثانية، اذهب للمتجر
-                setTimeout(() => {
-                    if (!document.hidden) {
-                        window.location.href =
-                            'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
-                    }
-                }, 1000);
-            } else {
-                // إذا لم يوجد ID، اذهب مباشرة للمتجر
-                window.location.href =
-                    'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
+       function openApp() {
+    const distributorId = getDistributorId();
+    
+    if (distributorId) {
+        // الرابط الصحيح - بدون s في distributors
+        const appLink = 'komondi://distributor?id=' + distributorId;
+        
+        // محاولة فتح التطبيق
+        window.location.href = appLink;
+        
+        // في حالة فشل فتح التطبيق
+        setTimeout(() => {
+            // تحقق إذا ظلت الصفحة مرئية (يعني التطبيق لم يفتح)
+            if (!document.hidden && !document.webkitHidden) {
+                // اذهب مباشرة إلى الصفحة في المتجر
+                window.location.href = 
+                    'https://play.google.com/store/apps/details?id=com.dzstartup.komondi&referrer=' + distributorId;
             }
-        }
+        }, 1500); // زد الوقت إلى 1.5 ثانية
+    } else {
+        window.location.href = 
+            'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
+    }
+}
 
         // تشغيل عند تحميل الصفحة
         window.onload = function() {
@@ -87,3 +88,4 @@
     </script>
 </body>
 </html>
+
