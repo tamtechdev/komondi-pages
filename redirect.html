@@ -62,6 +62,8 @@
     if (distributorId) {
         // الرابط الصحيح - بدون s في distributors
         const appLink = 'komondi://distributor?id=' + distributorId;
+        const intentLink = 'intent://distributor?id=' + distributorId +
+            '#Intent;scheme=komondi;package=com.dzstartup.komondi;end';
         
         // محاولة فتح التطبيق
         window.location.href = appLink;
@@ -74,7 +76,7 @@
                 window.location.href = 
                     'https://play.google.com/store/apps/details?id=com.dzstartup.komondi&referrer=' + distributorId;
             }
-        }, 1500); // زد الوقت إلى 1.5 ثانية
+        }, 2000); // زد الوقت إلى 1.5 ثانية
     } else {
         window.location.href = 
             'https://play.google.com/store/apps/details?id=com.dzstartup.komondi';
@@ -88,6 +90,7 @@
     </script>
 </body>
 </html>
+
 
 
 
