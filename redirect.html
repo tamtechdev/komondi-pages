@@ -49,18 +49,19 @@
         <p>إذا لم يفتح التطبيق تلقائياً، سيتم توجيهك لتحميله...</p>
     </div>
 
-  function getStoreNameFromUrl() {
+    <script>
+        // قراءة ID الموزع من query parameter
+        function getDistributorId() {
             const params = new URLSearchParams(window.location.search);
-            return params.get('store');
+            return params.get('id');
         }
 
        function openApp() {
-  const storeName = getStoreNameFromUrl();
+    const distributorId = getDistributorId();
     
-    if (storeName) {
+    if (distributorId) {
         // الرابط الصحيح - بدون s في distributors
-      const defaultDistributorId = "default_id";
-        const appLink = 'komondi://distributor?id=' + defaultDistributorId;
+        const appLink = 'komondi://distributor?id=' + distributorId;
         
         // محاولة فتح التطبيق
         window.location.href = appLink;
