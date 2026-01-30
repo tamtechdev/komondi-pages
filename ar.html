@@ -18,9 +18,9 @@ a { text-decoration:none; }
 /* Header */
 header { background:linear-gradient(135deg, #1e88e5, #1565c0); color:#fff; text-align:center; padding:80px 20px; position:relative; }
 header img { max-width:160px; margin-bottom:20px; }
-header h1 { font-size:38px; font-weight:800; margin-bottom:15px; line-height:1.3; }
-header p { font-size:20px; margin-bottom:30px; }
-header .btn { display:inline-block; background:#fff; color:#1e88e5; padding:16px 34px; border-radius:50px; font-weight:700; font-size:18px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:all 0.3s ease; }
+header h1 { font-size:38px; font-weight:800; margin-bottom:15px; line-height:1.3; opacity:0; transform:translateY(-20px); animation:fadeInDown 1s forwards 0.3s;}
+header p { font-size:20px; margin-bottom:30px; opacity:0; transform:translateY(-20px); animation:fadeInDown 1s forwards 0.6s;}
+header .btn { display:inline-block; background:#fff; color:#1e88e5; padding:16px 34px; border-radius:50px; font-weight:700; font-size:18px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:all 0.3s ease; opacity:0; transform:translateY(-20px); animation:fadeInDown 1s forwards 0.9s;}
 header .btn:hover { transform:translateY(-3px); box-shadow:0 15px 30px rgba(0,0,0,0.2); }
 
 /* Lang Switch */
@@ -36,22 +36,44 @@ p { line-height:1.8; font-size:18px; text-align:center; }
 
 /* Cards */
 .steps, .features, .social-proof { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px; }
-.card { background:#fff; padding:25px 20px; border-radius:20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s ease, box-shadow 0.3s ease; }
+.card { background:#fff; padding:25px 20px; border-radius:20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s ease, box-shadow 0.3s ease; opacity:0; transform:translateY(30px);}
 .card:hover { transform:translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,0.12); }
 .card h3 { margin-bottom:15px; font-size:22px; }
+
+/* Cards animations */
+.steps .card:nth-child(1) { animation:fadeInUp 0.8s forwards 0.2s; }
+.steps .card:nth-child(2) { animation:fadeInUp 0.8s forwards 0.4s; }
+.steps .card:nth-child(3) { animation:fadeInUp 0.8s forwards 0.6s; }
+
+.features .card:nth-child(1) { animation:fadeInUp 0.8s forwards 0.2s; }
+.features .card:nth-child(2) { animation:fadeInUp 0.8s forwards 0.4s; }
+.features .card:nth-child(3) { animation:fadeInUp 0.8s forwards 0.6s; }
+.features .card:nth-child(4) { animation:fadeInUp 0.8s forwards 0.8s; }
+
+.social-proof .card:nth-child(1) { animation:fadeInUp 0.8s forwards 0.2s; }
+.social-proof .card:nth-child(2) { animation:fadeInUp 0.8s forwards 0.4s; }
+.social-proof .card:nth-child(3) { animation:fadeInUp 0.8s forwards 0.6s; }
+
+/* Gallery */
+.gallery img { width:100%; border-radius:18px; margin-bottom:25px; box-shadow:0 8px 25px rgba(0,0,0,0.1); opacity:0; transform:scale(0.95);}
+.gallery img:nth-child(2) { animation:fadeIn 1s forwards 0.2s;}
+.gallery img:nth-child(3) { animation:fadeIn 1s forwards 0.4s;}
+.gallery img:nth-child(4) { animation:fadeIn 1s forwards 0.6s; }
 
 /* CTA */
 .cta { background:linear-gradient(135deg, #1e88e5, #1565c0); color:#fff; text-align:center; padding:80px 20px; }
 .cta h2 { font-size:32px; margin-bottom:20px; }
 .cta p { font-size:20px; margin-bottom:30px; }
-.btn-download { display:inline-block; background:#fff; color:#1e88e5; font-weight:700; font-size:18px; padding:16px 36px; border-radius:50px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:0.3s ease; }
+.btn-download { display:inline-block; background:#fff; color:#1e88e5; font-weight:700; font-size:18px; padding:16px 36px; border-radius:50px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:0.3s ease;}
 .btn-download:hover { background:#e3f2fd; transform:translateY(-3px); box-shadow:0 15px 30px rgba(0,0,0,0.2); }
 
 /* Footer */
 footer { background:#1565c0; color:#fff; text-align:center; padding:25px 20px; font-size:15px; }
 
-/* Gallery */
-.gallery img { width:100%; border-radius:18px; margin-bottom:25px; box-shadow:0 8px 25px rgba(0,0,0,0.1); }
+/* Animations Keyframes */
+@keyframes fadeInUp { 0% {opacity:0; transform:translateY(30px);} 100% {opacity:1; transform:translateY(0);} }
+@keyframes fadeInDown { 0% {opacity:0; transform:translateY(-20px);} 100% {opacity:1; transform:translateY(0);} }
+@keyframes fadeIn { 0% {opacity:0; transform:scale(0.95);} 100% {opacity:1; transform:scale(1);} }
 
 /* Responsive */
 @media (max-width:600px){ header h1{font-size:26px;} header p{font-size:18px;} h2{font-size:26px;} }
@@ -59,6 +81,7 @@ footer { background:#1565c0; color:#fff; text-align:center; padding:25px 20px; f
 </head>
 
 <body>
+
 <div class="lang-switch">
   <a href="index.html">🇫🇷 Français</a>
   <a href="ar.html">🇩🇿 العربية</a>
@@ -171,3 +194,4 @@ footer { background:#1565c0; color:#fff; text-align:center; padding:25px 20px; f
 
 </body>
 </html>
+
