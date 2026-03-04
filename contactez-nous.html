@@ -6,56 +6,190 @@
   <title>اتصل بنا | Komondi</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* تنسيقات الحقول الجديدة */
+    /* تحسينات احترافية للنموذج */
+    .contact-container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* حاويات الهاتف بشكل محسن */
     .phone-container {
       display: flex;
-      gap: 15px;
-      margin-bottom: 20px;
+      gap: 20px;
+      margin: 15px 0;
     }
-    
+
     .phone-field {
       flex: 1;
+      position: relative;
     }
-    
+
+    /* تنسيق حقول الإدخال */
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      border-color: #25D366;
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.1);
+      outline: none;
+    }
+
+    /* حل احترافي لمشكلة الأرقام المقلوبة */
+    .phone-field input {
+      direction: ltr !important;
+      text-align: left !important;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.5px;
+    }
+
+    /* تنسيق الـ placeholder للعربية */
+    .phone-field input::placeholder {
+      direction: rtl !important;
+      text-align: right !important;
+      font-family: 'Cairo', sans-serif;
+      color: #999;
+      opacity: 1;
+    }
+
+    /* تلميحات الحقول */
     .phone-hint {
       font-size: 0.85em;
-      color: #666;
-      margin-top: 4px;
-      display: flex;
+      margin-top: 6px;
+      padding: 5px 10px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      display: inline-flex;
       align-items: center;
       gap: 5px;
     }
-    
+
     .whatsapp-hint {
-      color: #25D366;
+      background: #e8f5e9;
+      color: #075E54;
     }
-    
-    .phone-hint i {
-      font-size: 1.2em;
-    }
-    
-    .email-note {
-      background: #f0f7ff;
-      padding: 8px 12px;
-      border-radius: 8px;
-      margin: 5px 0 15px 0;
-      font-size: 0.9em;
-      border-right: 3px solid #4285f4;
-    }
-    
+
+    /* صندوق معلومات الاتصال */
     .contact-info-box {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #e0e0e0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+      border-radius: 16px;
+      margin: 20px 0;
+      color: white;
     }
-    
+
     .contact-info-box h3 {
+      color: white;
       margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.3em;
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+      padding-bottom: 10px;
+    }
+
+    /* ملاحظة البريد الإلكتروني */
+    .email-note {
+      background: #e3f2fd;
+      padding: 12px 15px;
+      border-radius: 12px;
+      margin: 10px 0 20px;
+      font-size: 0.95em;
+      border-right: 4px solid #2196f3;
+      color: #0d47a1;
+    }
+
+    /* زر الواتساب المحسن */
+    .whatsapp-contact {
+      margin-top: 25px;
+      padding: 20px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      border-radius: 16px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-contact:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+    }
+
+    .whatsapp-button {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.2);
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(5px);
       margin-bottom: 10px;
-      color: #333;
-      font-size: 1.1em;
+    }
+
+    .whatsapp-button:hover {
+      background: white;
+      color: #075E54;
+      border-color: white;
+    }
+
+    .whatsapp-number {
+      direction: ltr;
+      display: inline-block;
+      font-family: 'Courier New', monospace;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      background: rgba(0,0,0,0.1);
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .whatsapp-contact span:last-child {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.95em;
+    }
+
+    /* تحسين ظهور الأرقام في النصوص */
+    .ltr-number {
+      direction: ltr;
+      display: inline-block;
+      unicode-bidi: embed;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .phone-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .whatsapp-button {
+        font-size: 1em;
+        padding: 12px 20px;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
@@ -85,26 +219,23 @@
       <div class="phone-container">
         <div class="phone-field">
           <label for="whatsapp">رقم الواتساب / Numéro WhatsApp *</label>
-          <input type="tel" id="whatsapp" name="whatsapp" required placeholder="مثال: 212612345678+ / Ex: +212612345678">
+          <input type="tel" id="whatsapp" name="whatsapp" required 
+                 placeholder="مثال: 0551682179"
+                 dir="ltr">
           <div class="phone-hint whatsapp-hint">
-            <i>💬</i> رقم الواتساب للتواصل السريع / WhatsApp pour contact rapide
+            <i>💬</i> رقم الواتساب للتواصل السريع
           </div>
         </div>
         
-      <div class="phone-field">
-  <label for="whatsapp">رقم الواتساب / Numéro WhatsApp *</label>
-  <input type="tel" id="whatsapp" name="whatsapp" required 
-         placeholder="مثال: 0551682179 / Ex: +213551682179"
-         dir="ltr" 
-         style="text-align: left;">
-  <div class="phone-hint whatsapp-hint">
-    <i>💬</i> رقم الواتساب للتواصل السريع / WhatsApp pour contact rapide
-  </div>
-</div>
-      
-      <div style="background: #e8f5e8; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; margin-top: 5px;">
-        <i>🔔</i> سيتم استخدام رقم الواتساب للرد على استفسارك بشكل أسرع
-        <br>Votre numéro WhatsApp sera utilisé pour une réponse plus rapide
+        <div class="phone-field">
+          <label for="phone">رقم الهاتف / Téléphone</label>
+          <input type="tel" id="phone" name="phone" 
+                 placeholder="مثال: 0551682179"
+                 dir="ltr">
+          <div class="phone-hint">
+            <i>📞</i> رقم هاتف إضافي (اختياري)
+          </div>
+        </div>
       </div>
     </div>
 
@@ -139,20 +270,21 @@
 
     <button type="submit">إرسال الرسالة / Envoyer le message</button>
 
- <p class="note">
-  ⏰ يتم الرد على الرسائل خلال <strong>24 إلى 48 ساعة</strong> عبر الواتساب أو البريد الإلكتروني.<br>
-  Les réponses sont envoyées sous <strong>24 à 48 heures</strong> par WhatsApp ou email.
-</p>
+    <p class="note">
+      ⏰ يتم الرد على الرسائل خلال <strong>24 إلى 48 ساعة</strong> عبر الواتساب أو البريد الإلكتروني.<br>
+      Les réponses sont envoyées sous <strong>24 à 48 heures</strong> par WhatsApp ou email.
+    </p>
 
-<div class="whatsapp-contact">
-  <a href="https://wa.me/213551682179" target="_blank" class="whatsapp-button">
-    <i>💬</i>
-    <span>اتصل بنا على الواتساب: <bdi>+213 55 168 2179</bdi></span>
-  </a>
-  <span>
-    إذا لم يتم الرد خلال 48 ساعة • Si pas de réponse dans 48h
-  </span>
-</div>
+    <!-- قسم الواتساب المحسن -->
+    <div class="whatsapp-contact">
+      <a href="https://wa.me/213551682179" target="_blank" class="whatsapp-button">
+        <i>💬</i>
+        <span>اتصل بنا على الواتساب: <span class="whatsapp-number">+213 55 168 2179</span></span>
+      </a>
+      <span>
+        إذا لم يتم الرد خلال 48 ساعة • Si pas de réponse dans 48h
+      </span>
+    </div>
   </form>
 
   <div id="successOverlay" class="overlay">
@@ -182,6 +314,7 @@
     e.preventDefault();
     const formAction = "https://script.google.com/macros/s/AKfycbwKY-P_VhMp2Z5Y7p7lxGgZIFNMAcweqsPDNQl-TFJUdxDg-VHYCtW-EIaGmHLz22Zx/exec";
     const formData = new FormData(this);
+    
     fetch(formAction, { method: 'POST', body: formData, mode: 'no-cors' })
       .then(() => {
         this.reset();
@@ -194,8 +327,3 @@
 
 </body>
 </html>
-
-
-
-
-
