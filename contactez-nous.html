@@ -479,7 +479,7 @@
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const formAction = "https://script.google.com/macros/s/AKfycbwKY-P_VhMp2Z5Y7p7lxGgZIFNMAcweqsPDNQl-TFJUdxDg-VHYCtW-EIaGmHLz22Zx/exec";
+  const formAction = "https://script.google.com/macros/s/XXXXXXXX/exec";
     const formData = new FormData(this);
     
     fetch(formAction, { method: 'POST', body: formData, mode: 'no-cors' })
@@ -497,3 +497,4 @@
 
 </body>
 </html>
+
