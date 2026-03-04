@@ -5,6 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>اتصل بنا | Komondi</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* تنسيقات الحقول الجديدة */
+    .phone-container {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .phone-field {
+      flex: 1;
+    }
+    
+    .phone-hint {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .whatsapp-hint {
+      color: #25D366;
+    }
+    
+    .phone-hint i {
+      font-size: 1.2em;
+    }
+    
+    .email-note {
+      background: #f0f7ff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin: 5px 0 15px 0;
+      font-size: 0.9em;
+      border-right: 3px solid #4285f4;
+    }
+    
+    .contact-info-box {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .contact-info-box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 1.1em;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,8 +72,39 @@
     <label for="name">الاسم الكامل / Nom complet *</label>
     <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل / Entrez votre nom complet">
 
-    <label for="email">البريد الإلكتروني / Adresse e-mail *</label>
+    <label for="email">البريد الإلكتروني المرتبط بحسابك / Email associé à votre compte *</label>
     <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+    <div class="email-note">
+      📧 الرجاء إدخال البريد الإلكتروني الذي استخدمته لإنشاء حسابك في Komondi
+      <br>Veuillez saisir l'email utilisé pour créer votre compte Komondi
+    </div>
+
+    <div class="contact-info-box">
+      <h3>📱 معلومات الاتصال / Coordonnées</h3>
+      
+      <div class="phone-container">
+        <div class="phone-field">
+          <label for="whatsapp">رقم الواتساب / Numéro WhatsApp *</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required placeholder="مثال: 212612345678+ / Ex: +212612345678">
+          <div class="phone-hint whatsapp-hint">
+            <i>💬</i> رقم الواتساب للتواصل السريع / WhatsApp pour contact rapide
+          </div>
+        </div>
+        
+        <div class="phone-field">
+          <label for="phone">رقم الهاتف / Téléphone</label>
+          <input type="tel" id="phone" name="phone" placeholder="مثال: 212612345678+ / Ex: +212612345678">
+          <div class="phone-hint">
+            <i>📞</i> رقم هاتف إضافي (اختياري) / Téléphone supplémentaire (optionnel)
+          </div>
+        </div>
+      </div>
+      
+      <div style="background: #e8f5e8; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; margin-top: 5px;">
+        <i>🔔</i> سيتم استخدام رقم الواتساب للرد على استفسارك بشكل أسرع
+        <br>Votre numéro WhatsApp sera utilisé pour une réponse plus rapide
+      </div>
+    </div>
 
     <label for="userType">نوع المستخدم / Type d’utilisateur *</label>
     <select id="userType" name="userType" required>
@@ -49,13 +133,13 @@
     </div>
 
     <label for="message">الرسالة / Message *</label>
-    <textarea id="message" name="message" required placeholder="اكتب رسالتك / Écrivez votre message..."></textarea>
+    <textarea id="message" name="message" required placeholder="اكتب رسالتك / Écrivez votre message..." rows="5"></textarea>
 
     <button type="submit">إرسال الرسالة / Envoyer le message</button>
 
     <p class="note">
-      ⏰ يتم الرد على الرسائل خلال <strong>24 إلى 48 ساعة</strong>.<br>
-      Les réponses sont envoyées sous <strong>24 à 48 heures</strong>.
+      ⏰ يتم الرد على الرسائل خلال <strong>24 إلى 48 ساعة</strong> عبر الواتساب أو البريد الإلكتروني.<br>
+      Les réponses sont envoyées sous <strong>24 à 48 heures</strong> par WhatsApp ou email.
     </p>
   </form>
 
@@ -98,4 +182,3 @@
 
 </body>
 </html>
-
