@@ -331,23 +331,27 @@ footer {
   cursor: pointer;
   z-index: 10000;
 }
+/* قسم الواتساب بالكامل */
+.whatsapp-section {
+  margin-top: 30px;
+}
+
 .whatsapp-contact {
-  margin-top: 20px;
-  padding: 15px;
-  background: white;
-  border: 2px solid #25D366;
-  border-radius: 16px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: 20px;
+  padding: 25px 20px;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15);
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 .whatsapp-contact:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
-  border-color: #128C7E;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
 }
 
+/* تنسيق زر الواتساب */
 .whatsapp-button {
   color: #075E54;
   text-decoration: none;
@@ -355,24 +359,56 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  background: #f0fff4;
-  padding: 12px 25px;
-  border-radius: 50px;
+  gap: 12px;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 60px;
   font-weight: bold;
   transition: all 0.3s ease;
-  border: 1px solid #25D366;
+  border: 2px solid #25D366;
   width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .whatsapp-button:hover {
   background: #25D366;
   color: white;
-  text-decoration: none;
+  border-color: white;
+  transform: scale(1.02);
 }
 
-.whatsapp-button i {
+/* تنسيق الرقم */
+.whatsapp-number {
+  background: #25D366;
+  color: white !important;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  border: 1px solid rgba(255,255,255,0.3);
+  margin: 0 5px;
+}
+
+.whatsapp-button:hover .whatsapp-number {
+  background: white;
+  color: #25D366 !important;
+}
+
+/* تنسيق النص الثابت */
+.whatsapp-note {
+  display: block;
+  color: white !important;
+  font-size: 0.95em;
+  opacity: 0.95;
+  margin-top: 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  font-weight: 400;
+}
+
+/* تنسيق الأيقونة */
+.whatsapp-button i, 
+.whatsapp-button .emoji {
   font-size: 1.4em;
   background: #25D366;
   color: white;
@@ -385,37 +421,26 @@ footer {
   transition: all 0.3s ease;
 }
 
-.whatsapp-button:hover i {
+.whatsapp-button:hover i,
+.whatsapp-button:hover .emoji {
   background: white;
   color: #25D366;
 }
 
-.whatsapp-contact span {
-  display: block;
-  margin-top: 10px;
-  color: #ffffff;
-  font-size: 0.95em;
-}
-
-/* نسخة للهواتف */
+/* نسخة الهواتف */
 @media (max-width: 480px) {
   .whatsapp-button {
     font-size: 1em;
-    padding: 10px 15px;
+    padding: 12px 20px;
     flex-wrap: wrap;
   }
   
-  .whatsapp-button i {
-    width: 30px;
-    height: 30px;
-    font-size: 1.2em;
+  .whatsapp-number {
+    font-size: 0.85em;
+    padding: 3px 10px;
   }
-}
-.whatsapp-note {
-  display: block;
-  margin-top: 15px;
-  color: white;
-  opacity: 0.9;
-  font-size: 0.95em;
-  text-align: center;
+  
+  .whatsapp-contact {
+    padding: 20px 15px;
+  }
 }
