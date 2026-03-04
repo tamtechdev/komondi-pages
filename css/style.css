@@ -411,3 +411,11 @@ footer {
     font-size: 1.2em;
   }
 }
+.whatsapp-note {
+  display: block;
+  margin-top: 15px;
+  color: white;
+  opacity: 0.9;
+  font-size: 0.95em;
+  text-align: center;
+}
