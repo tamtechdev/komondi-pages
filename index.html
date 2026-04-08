@@ -2,229 +2,680 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Komondi - La plateforme qui connecte distributeurs et commerçants</title>
-  <meta name="description" content="Komondi connecte distributeurs, fournisseurs et commerçants. Présentez vos produits, recevez des commandes et gérez vos ventes facilement depuis votre smartphone.">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-53HL6Q5G');</script>
-<!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CV3T8GK899"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Komondi – La solution intelligente pour gérer vos ventes et commandes</title>
+  <meta name="description" content="Komondi application algérienne complète pour distributeurs et grossistes. Gérez produits, vendeurs, commandes, factures et tickets. Profitez du plan gratuit!">
+  <meta name="keywords" content="Komondi, ventes, commandes, distributeurs, grossistes, application algérienne, gestion des ventes">
+  <meta name="author" content="Komondi">
 
-  gtag('config', 'G-CV3T8GK899');
-</script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "url": "https://komondi.net",
-    "logo": "https://komondi.net/images/logo_komondi_blanc_194.png",
-    "name": "Komondi",
-    "description": "La plateforme qui connecte distributeurs et commerçants",
-    "sameAs": [
-      "https://play.google.com/store/apps/details?id=com.dzstartup.komondi"
-    ]
-  }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-53HL6Q5G');</script>
+  
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CV3T8GK899"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CV3T8GK899');
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://komondi.net",
-    "name": "Komondi",
-    "description": "La plateforme qui connecte distributeurs et commerçants"
-  }
-  </script>
-  <link rel="stylesheet" href="css/style.css">
+
   <style>
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333;}
-    header {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #f5f7fe 0%, #eef2f9 100%);
+      color: #1a2a3a;
+      line-height: 1.6;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #e0e7ff;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #1e88e5, #0d47a1);
+      border-radius: 10px;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -1000px 0; }
+      100% { background-position: 1000px 0; }
+    }
+
+    .header {
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 30%, #1e88e5 100%);
+      color: white;
+      padding: 100px 20px 120px;
       position: relative;
-      z-index: 1;background: #1e88e5; color: #fff; text-align: center; padding: 40px 20px;}
-    header .logo {max-width: 160px; margin-bottom: 10px;}
-    .nav-container {display: flex; justify-content: center; gap: 15px; padding: 20px; background: #fff;}
-    .nav-button {padding: 10px 18px; background: #1e88e5; color: #fff; border-radius: 6px; text-decoration: none; font-weight: bold;}
-    .hero {padding: 40px 20px; text-align: center; background: #fff;}
-    .hero h2 {font-size: 28px; margin-bottom: 15px;}
-    .hero p {font-size: 18px; max-width: 700px; margin: auto;}
-    .app-buttons {margin-top: 20px;}
-    .app-buttons a img {width: 180px;}
-    .features {padding: 40px 20px; background: #f1f1f1;}
-    .features h2 {text-align: center; margin-bottom: 30px; font-size: 26px;}
-    .feature-box {background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);}    
-    .gallery img {width: 100%; border-radius: 10px; margin-bottom: 15px;}
-    footer {text-align: center; padding: 20px; background: #1e88e5; color: #fff; margin-top: 40px;}
-      /* --- Responsive Mobile Optimisation --- */
-    @media (max-width: 600px) {
-      header {padding: 30px 15px;}
-      header h1 {font-size: 22px;}
-      .nav-container {flex-direction: column; gap: 10px;}
-      .nav-button {width: 100%; text-align: center; padding: 12px;}
-      .hero h2 {font-size: 22px;}
-      .hero p {font-size: 16px;}
-      .app-buttons a img {width: 150px;}
-      .feature-box {padding: 15px;}
-      .features h2 {font-size: 22px;}
-      .gallery h2 {font-size: 22px !important;}
-    }
-      /* Drawer Menu */
-    .menu-icon {
-      display: none;
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 2000;
-      color: #fff;
+      overflow: hidden;
     }
 
-    .drawer {
-      position: fixed;
-      top: 0;
-      left: -300px; /* pull completely outside */
-      width: 260px;
-      height: 100%;
-      background: #1e88e5;
-      padding: 80px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      transition: left 0.4s ease;
-      z-index: 1999;
-      box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+      animation: shimmer 15s infinite linear;
     }
 
-    .drawer.open {
-      left: 0 !important;
-    }
-
-    .drawer a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-    } {
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-    }
-    .drawer .close-btn {
-      margin-top: 20px;
-      color: #fff;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    .drawer.open {
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
       left: 0;
+      right: 0;
+      height: 60px;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="%23f5f7fe"/></svg>') no-repeat bottom;
+      background-size: 100% 60px;
     }
 
-    @media (max-width: 700px) {
-      .menu-icon {display: block;}
-      .nav-container {display: none;}
+    .lang-switch {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      z-index: 100;
+      display: flex;
+      gap: 12px;
     }
 
+    .lang-switch a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      padding: 8px 18px;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .lang-switch a:hover {
+      background: white;
+      color: #1565c0;
+      transform: translateY(-2px);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      max-width: 140px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.2));
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .header h1 {
+      font-size: 52px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.8s ease 0.2s backwards;
+      line-height: 1.3;
+    }
+
+    .header .subtitle {
+      font-size: 24px;
+      font-weight: 600;
+      opacity: 0.95;
+      margin-bottom: 15px;
+      animation: fadeInUp 0.8s ease 0.4s backwards;
+    }
+
+    .header .highlight {
+      background: #ffd966;
+      color: #0d47a1;
+      padding: 5px 15px;
+      border-radius: 40px;
+      display: inline-block;
+      margin: 5px 0;
+    }
+
+    .header .offer-badge {
+      background: linear-gradient(135deg, #ff9800, #ff5722);
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 60px;
+      font-size: 20px;
+      font-weight: 800;
+      margin: 25px 0 20px;
+      animation: pulse 2s infinite, fadeInUp 0.8s ease 0.6s backwards;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .header .offer-badge i {
+      margin-right: 10px;
+    }
+
+    .header .offer-text {
+      font-size: 18px;
+      margin-bottom: 30px;
+      animation: fadeInUp 0.8s ease 0.8s backwards;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      color: #1565c0;
+      padding: 18px 42px;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      animation: fadeInUp 0.8s ease 1s backwards;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      background: #f8f9ff;
+    }
+
+    .btn-download i {
+      font-size: 28px;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #0d47a1;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #1e88e5, #ff9800);
+      margin: 15px auto 0;
+      border-radius: 4px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #5a6e7c;
+      margin-bottom: 50px;
+    }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 30px;
+    }
+
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 35px 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid rgba(30,136,229,0.1);
+      animation: fadeInUp 0.8s ease backwards;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      border-color: rgba(30,136,229,0.3);
+    }
+
+    .card-icon {
+      font-size: 55px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #1e88e5, #1565c0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #1a2a3a;
+    }
+
+    .card p {
+      color: #5a6e7c;
+      line-height: 1.7;
+    }
+
+    .free-plan-section {
+      background: linear-gradient(135deg, #1e88e5, #0d47a1);
+      color: white;
+      border-radius: 40px;
+      margin: 40px auto;
+      padding: 60px 40px;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(13,71,161,0.3);
+    }
+
+    .free-plan-section h2 {
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .free-plan-section .big-free {
+      font-size: 70px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffd54f, #ff9800);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      margin: 20px 0;
+    }
+
+    .free-plan-section p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature-list span {
+      background: rgba(255,255,255,0.2);
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 14px;
+      backdrop-filter: blur(5px);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 42px;
+      font-weight: 800;
+      color: #1e88e5;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: #5a6e7c;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #0d47a1, #1e88e5);
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .cta-section h2 {
+      color: white;
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.9);
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #ff9800;
+      color: #fff;
+      padding: 18px 45px;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 22px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .btn-cta:hover {
+      transform: scale(1.05);
+      background: #ff5722;
+    }
+
+    footer {
+      background: #0a2a44;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .social-links a {
+      color: white;
+      font-size: 24px;
+      transition: 0.3s;
+      opacity: 0.7;
+    }
+
+    .social-links a:hover {
+      opacity: 1;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .header h1 { font-size: 32px; }
+      .header .subtitle { font-size: 18px; }
+      .section-title { font-size: 28px; }
+      .free-plan-section h2 { font-size: 28px; }
+      .free-plan-section .big-free { font-size: 45px; }
+      .btn-download, .btn-cta { padding: 14px 28px; font-size: 16px; }
+      .grid-3, .grid-2, .grid-4 { gap: 20px; }
+      .card { padding: 25px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 { font-size: 26px; }
+      .offer-badge { font-size: 16px; padding: 8px 20px; }
+    }
   </style>
 </head>
-<body style="position: relative; overflow-x: hidden;">
+<body>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53HL6Q5G"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <!-- Menu Drawer -->
-  <div id="drawer" class="drawer">
-    <a href="index.html">Accueil</a>
-    <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-    <a href="contactez-nous.html">Contactez-nous</a>
-    <span class="close-btn" onclick="toggleDrawer()">✕ Fermer</span>
-  </div>
 
-  <!-- Bouton Menu Mobile -->
-  <div class="menu-icon" onclick="toggleDrawer()">☰</div>
-<!-- Bouton pour changer la langue -->
-<div class="lang-switch" style="position:absolute; top:20px; right:20px; z-index:999;">
-  <a href="ar.html" style="padding:6px 12px; background:rgba(0,0,0,0.2); color:#fff; border-radius:8px; text-decoration:none; font-weight:700;">🇩🇿 العربية</a>
+<div class="lang-switch">
+  <a href="ar.html" style="background:white; color:#1565c0;">🇩🇿 العربية</a>
+  <a href="index.html">🇫🇷 Français</a>
 </div>
 
-  <header>
-    <img src="images/logo_komondi_blanc_194.png" alt="Komondi Logo" class="logo">
-    <h1>Komondi – Connectez distributeurs et commerçants facilement</h1>
-  </header>
-
-  <div class="nav-container">
-    <a href="index.html" class="nav-button">Accueil</a>
-    <a href="politique-de-confidentialite.html" class="nav-button">Politique de confidentialité</a>
-    <a href="contactez-nous.html" class="nav-button">Contactez-nous</a>
-    <a href="https://app.komondi.net" class="nav-button" style="background: #4CAF50;">
-  📊 Tableau de bord
-</a>
-  </div>
-
-  <!-- SECTION HERO -->
-  <section class="hero">
-    <h2>Vendez, organisez et livrez depuis votre téléphone</h2>
-    <p>Komondi aide les distributeurs à vendre et livrer plus facilement. Présentez vos produits, recevez des commandes et gérez vos ventes sans déplacements inutiles.</p>
-
-    <div class="app-buttons">
-    <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px; color:#007bff;">
-        Télécharger l'application
+<!-- HEADER -->
+<header class="header">
+  <div class="header-content">
+    <img src="images/logo_komondi_blanc_194.png" alt="Komondi" class="logo">
+    
+    <h1>
+      ⚡ Augmentez vos ventes<br>et trouvez de nouveaux clients ⚡
+    </h1>
+    
+    <p class="subtitle">
+      La première application algérienne qui fait apparaître vos produits aux commerçants <span class="highlight">selon la wilaya et l'activité</span>
     </p>
-
-    <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" target="_blank">
-        <img src="images/Google-Play.png" alt="Télécharger sur Google Play" style="width:180px;">
+    
+    <p style="font-size: 18px; margin-top: 20px; opacity: 0.95;">
+      <i class="fas fa-chart-line"></i> Ceux qui ont besoin de vous vous trouvent facilement – augmentez vos ventes sans effort
+    </p>
+    
+    <div class="offer-badge">
+      <i class="fas fa-gift"></i> Offre exclusive: Profitez du plan gratuit!
+    </div>
+    <p class="offer-text">✨ Bénéficiez de toutes les fonctionnalités actuelles de l'application sans aucun frais ✨</p>
+    <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-download">
+      <i class="fab fa-google-play"></i> Télécharger l'application
     </a>
-</div>
+  </div>
+</header>
 
-
-  <!-- SECTION FEATURES -->
-  <section class="features">
-    <h2>Pourquoi utiliser Komondi ?</h2>
-
-    <div class="feature-box">
-      <h3>📦 Pour les distributeurs</h3>
-      <p>Gérez vos produits, vos commandes et vos clients directement depuis votre smartphone. Ajoutez vos produits avec photos, prix et stock, recevez et confirmez les commandes, et organisez vos livraisons facilement.</p>
+<!-- SECTION: Problème et Solution -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Fatigué des commandes dispersées et des faibles ventes?</h2>
+    <p class="section-subtitle">Commandes par téléphone, WhatsApp, cahiers – tout est désorganisé et les erreurs sont fréquentes</p>
+    <div class="grid-2">
+      <div class="card" style="animation-delay:0.1s;">
+        <div class="card-icon"><i class="fas fa-times-circle"></i></div>
+        <h3>Le Problème</h3>
+        <p>📝 Commandes sur cahiers qui se perdent<br>
+        📱 WhatsApp – messages qui disparaissent<br>
+        ❌ Erreurs dans les quantités et prix<br>
+        ⏱️ Temps perdu dans l'organisation<br>
+        📊 Difficulté à suivre les ventes</p>
+      </div>
+      <div class="card" style="animation-delay:0.2s;">
+        <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+        <h3>La Solution avec Komondi</h3>
+        <p>✅ Toutes les commandes organisées au même endroit<br>
+        ✅ Mise à jour instantanée des prix et stocks<br>
+        ✅ Accès rapide aux commandes<br>
+        ✅ Statistiques précises des ventes<br>
+        ✅ Économie de temps et d'effort</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="feature-box">
-      <h3>🛍️ Pour les commerçants</h3>
-      <p>Parcourez les catalogues des distributeurs près de chez vous, commandez vos produits en quelques clics, suivez vos livraisons et gérez vos approvisionnements sans perdre de temps.</p>
+<!-- SECTION: Plan Gratuit -->
+<section class="free-plan-section container">
+  <h2>🎁 Plan gratuit illimité 🎁</h2>
+  <div class="big-free">100% Gratuit</div>
+  <p><strong>Profitez de toutes les fonctionnalités actuelles de l'application sans payer un dinar!</strong><br>
+  Pas de limite de temps – restez gratuit avec le plan actuel</p>
+  <div class="feature-list">
+    <span>✅ Ajout de produits</span>
+    <span>✅ Ajout de vendeurs</span>
+    <span>✅ Gestion des commandes</span>
+    <span>✅ Factures et tickets</span>
+    <span>✅ Offres promotionnelles</span>
+    <span>✅ Statistiques complètes</span>
+  </div>
+</section>
+
+<!-- SECTION: Avantages pour Distributeurs -->
+<section>
+  <div class="container">
+    <h2 class="section-title">🚀 Pour le distributeur et grossiste</h2>
+    <p class="section-subtitle">Gérez votre activité professionnellement et facilement</p>
+    <div class="grid-3">
+      <div class="card" style="animation-delay:0.1s;">
+        <div class="card-icon"><i class="fas fa-boxes"></i></div>
+        <h3>Gestion des produits</h3>
+        <p>Ajoutez vos produits avec photos et prix, organisez-les par catégories et marques. Contrôle total sur les stocks et prix</p>
+      </div>
+      <div class="card" style="animation-delay:0.2s;">
+        <div class="card-icon"><i class="fas fa-users"></i></div>
+        <h3>Ajout des vendeurs</h3>
+        <p>Ajoutez des vendeurs ou représentants. Chaque vendeur a ses propres permissions et peut ajouter des clients et prendre des commandes</p>
+      </div>
+      <div class="card" style="animation-delay:0.3s;">
+        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Statistiques complètes</h3>
+        <p>Rapports précis sur les ventes, bénéfices, produits les plus demandés et clients fidèles</p>
+      </div>
+      <div class="card" style="animation-delay:0.4s;">
+        <div class="card-icon"><i class="fas fa-tags"></i></div>
+        <h3>Offres promotionnelles</h3>
+        <p>Créez des offres spéciales, réductions saisonnières pour attirer les clients et augmenter les ventes</p>
+      </div>
+      <div class="card" style="animation-delay:0.5s;">
+        <div class="card-icon"><i class="fas fa-print"></i></div>
+        <h3>Factures et tickets</h3>
+        <p>Imprimez des bons de livraison, tickets thermiques et factures professionnelles rapidement</p>
+      </div>
+      <div class="card" style="animation-delay:0.6s;">
+        <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Clients commandent eux-mêmes</h3>
+        <p>Vos clients voient les produits et commandent directement depuis leurs téléphones – sans effort pour vos vendeurs</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="feature-box">
-      <h3>📊 Statistiques et gestion avancée</h3>
-      <p>Komondi vous offre une vue complète sur vos ventes, vos produits et vos clients, grâce à des statistiques détaillées et un suivi en temps réel.</p>
+<!-- SECTION: Avantages pour Commerçants -->
+<section style="background: #eef2ff;">
+  <div class="container">
+    <h2 class="section-title">🛍️ Pour le commerçant (client du distributeur)</h2>
+    <p class="section-subtitle">Commandez facilement depuis votre magasin sans vous déplacer</p>
+    <div class="grid-3">
+      <div class="card" style="animation-delay:0.1s;">
+        <div class="card-icon"><i class="fas fa-store"></i></div>
+        <h3>Découvrez les distributeurs</h3>
+        <p>Voyez les distributeurs proches de vous et suivez-les, commandez facilement</p>
+      </div>
+      <div class="card" style="animation-delay:0.2s;">
+        <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+        <h3>Commande rapide</h3>
+        <p>Parcourez les produits, voyez les prix et photos, commandez directement depuis votre téléphone</p>
+      </div>
+      <div class="card" style="animation-delay:0.3s;">
+        <div class="card-icon"><i class="fas fa-history"></i></div>
+        <h3>Suivi des commandes</h3>
+        <p>Sachez où est votre commande, quand elle arrive, et le statut précis de chaque commande</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SECTION GALLERY -->
-  <section class="gallery" style="padding: 40px 20px;">
-    <h2 style="text-align:center; margin-bottom: 20px;">Aperçu de l'application</h2>
-    <img src="images/image1.png" alt="Capture 1">
-    <img src="images/image2.png" alt="Capture 2">
-    <img src="images/image3.png" alt="Capture 3">
-  </section>
+<!-- SECTION: Toutes les fonctionnalités -->
+<section>
+  <div class="container">
+    <h2 class="section-title">✨ Toutes les fonctionnalités au même endroit ✨</h2>
+    <div class="grid-4">
+      <div class="card"><i class="fas fa-database card-icon"></i><h3>Produits illimités</h3></div>
+      <div class="card"><i class="fas fa-user-plus card-icon"></i><h3>Vendeurs illimités</h3></div>
+      <div class="card"><i class="fas fa-chart-pie card-icon"></i><h3>Statistiques instantanées</h3></div>
+      <div class="card"><i class="fas fa-percent card-icon"></i><h3>Offres et réductions</h3></div>
+      <div class="card"><i class="fas fa-receipt card-icon"></i><h3>Factures et tickets</h3></div>
+      <div class="card"><i class="fas fa-bell card-icon"></i><h3>Notifications instantanées</h3></div>
+      <div class="card"><i class="fas fa-users card-icon"></i><h3>Gestion des clients</h3></div>
+      <div class="card"><i class="fas fa-truck card-icon"></i><h3>Organisation des livraisons</h3></div>
+    </div>
+    
+    <div class="stats">
+      <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Gratuit actuellement</div></div>
+      <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Service continu</div></div>
+      <div class="stat-item"><div class="stat-number">📱</div><div class="stat-label">Disponible pour tous</div></div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    © 2025 Komondi. Tous droits réservés.
-  </footer>
+<!-- SECTION: Images de l'application -->
+<section style="background: #eef2ff;">
+  <div class="container">
+    <h2 class="section-title">📱 Découvrez l'application</h2>
+    <div class="grid-3">
+      <img src="images/image1.png" alt="Komondi App" style="width:100%; border-radius:28px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+      <img src="images/image2.png" alt="Komondi App" style="width:100%; border-radius:28px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+      <img src="images/image3.png" alt="Komondi App" style="width:100%; border-radius:28px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</section>
 
-<script>
-    function toggleDrawer() {
-      document.getElementById('drawer').classList.toggle('open');
-    }
-  </script>
+<!-- SECTION CTA -->
+<section class="cta-section">
+  <h2>🚀 Vous voulez développer votre service et augmenter vos ventes?</h2>
+  <p>Essayez Komondi gratuitement aujourd'hui – sans aucun engagement</p>
+  <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-cta">
+    <i class="fab fa-google-play"></i> Télécharger l'application
+  </a>
+</section>
+
+<!-- SECTION: Contact -->
+<section>
+  <div class="container">
+    <h2 class="section-title">📞 Contactez-nous</h2>
+    <p class="section-subtitle">Des questions? On est là pour vous aider</p>
+    <div class="grid-2" style="max-width:500px; margin:0 auto;">
+      <div class="card">
+        <i class="fas fa-envelope card-icon"></i>
+        <h3>Email</h3>
+        <a href="mailto:support@komondi.net" style="color:#1e88e5; text-decoration:none;">support@komondi.net</a>
+      </div>
+      <div class="card">
+        <i class="fab fa-whatsapp card-icon"></i>
+        <h3>WhatsApp</h3>
+        <a href="https://wa.me/213551682179" target="_blank" style="color:#1e88e5; text-decoration:none;">+213 551 68 21 79</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="social-links">
+    <a href="https://www.facebook.com/komondi" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/komondi" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/213551682179" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>© 2025 Komondi – Tous droits réservés</p>
+  <p style="font-size:12px; opacity:0.6; margin-top:10px;">Application 100% algérienne – Simplifiez vos ventes et commandes</p>
+</footer>
+
 </body>
 </html>
-
