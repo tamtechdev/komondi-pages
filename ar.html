@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>كوموندي – الحل الذكي لإدارة المبيعات والطلبيات</title>
-<meta name="description" content="كوموندي تطبيق جزائري متكامل للموزعين وتجار الجملة. إدارة المنتجات، البائعين، الطلبيات، الفواتير، والتيكت. استفد من الخطة المجانية!">
-
-<meta name="keywords" content="كوموندي, مبيعات, طلبيات, موزعين, تجار, تطبيق جزائري, إدارة المبيعات">
+<meta name="description" content="كوموندي تطبيق جزائري متكامل للموزعين وتجار الجملة. خطط مرنة تبدأ من 290 دج. إدارة المنتجات، البائعين، الطلبيات، الفواتير والتيكت.">
+<meta name="keywords" content="كوموندي, مبيعات, طلبيات, موزعين, تجار, تطبيق جزائري">
 <meta name="author" content="Komondi">
 
- <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -27,30 +26,30 @@ src="https://www.facebook.com/tr?id=881695474889106&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
-
-
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Font Awesome 6 (مجاني) -->
+<!-- Font Awesome 6 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-53HL6Q5G');</script>
-  
-  <!-- Google tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CV3T8GK899"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CV3T8GK899');
-  </script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-53HL6Q5G');</script>
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CV3T8GK899"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CV3T8GK899');
+</script>
+
 <style>
 * {
   margin: 0;
@@ -66,7 +65,6 @@ body {
   line-height: 1.6;
 }
 
-/* ========== SCROLL BAR ========== */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -78,11 +76,7 @@ body {
   background: linear-gradient(135deg, #1e88e5, #0d47a1);
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #0d47a1;
-}
 
-/* ========== ANIMATIONS ========== */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -91,20 +85,20 @@ body {
   0% { opacity: 0; transform: translateX(-40px); }
   100% { opacity: 1; transform: translateX(0); }
 }
-@keyframes fadeInRight {
-  0% { opacity: 0; transform: translateX(40px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  50% { transform: scale(1.07); }
+}
+@keyframes btnPulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,152,0,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(255,152,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,152,0,0); }
 }
 @keyframes shimmer {
   0% { background-position: -1000px 0; }
   100% { background-position: 1000px 0; }
 }
 
-/* ========== HEADER ========== */
 .header {
   background: linear-gradient(135deg, #0d47a1 0%, #1565c0 30%, #1e88e5 100%);
   color: white;
@@ -112,7 +106,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 .header::before {
   content: '';
   position: absolute;
@@ -123,7 +116,6 @@ body {
   background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
   animation: shimmer 15s infinite linear;
 }
-
 .header::after {
   content: '';
   position: absolute;
@@ -143,7 +135,6 @@ body {
   display: flex;
   gap: 12px;
 }
-
 .lang-switch a {
   text-decoration: none;
   font-weight: 700;
@@ -156,7 +147,6 @@ body {
   font-size: 14px;
   border: 1px solid rgba(255,255,255,0.3);
 }
-
 .lang-switch a:hover {
   background: white;
   color: #1565c0;
@@ -170,14 +160,12 @@ body {
   position: relative;
   z-index: 2;
 }
-
 .logo {
   max-width: 140px;
   margin-bottom: 20px;
   filter: drop-shadow(0 8px 20px rgba(0,0,0,0.2));
   animation: fadeInUp 0.8s ease;
 }
-
 .header h1 {
   font-size: 48px;
   font-weight: 800;
@@ -185,14 +173,12 @@ body {
   animation: fadeInUp 0.8s ease 0.2s backwards;
   line-height: 1.3;
 }
-
 .header .subtitle {
   font-size: 22px;
   opacity: 0.95;
   margin-bottom: 15px;
   animation: fadeInUp 0.8s ease 0.4s backwards;
 }
-
 .header .offer-badge {
   background: linear-gradient(135deg, #ff9800, #ff5722);
   display: inline-block;
@@ -201,18 +187,39 @@ body {
   font-size: 20px;
   font-weight: 800;
   margin: 25px 0 20px;
-  animation: pulse 2s infinite, fadeInUp 0.8s ease 0.6s backwards;
+  animation: pulse 1.8s infinite, fadeInUp 0.8s ease 0.6s backwards;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
-
 .header .offer-badge i {
   margin-left: 10px;
 }
 
-.header .offer-text {
-  font-size: 18px;
-  margin-bottom: 30px;
-  animation: fadeInUp 0.8s ease 0.8s backwards;
+/* زر جلب الانتباه مع حركة */
+.btn-download-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ff9800;
+  color: #1a2a3a;
+  padding: 18px 42px;
+  border-radius: 60px;
+  font-weight: 800;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  animation: btnPulse 2s infinite, fadeInUp 0.8s ease 1s backwards;
+  border: none;
+  cursor: pointer;
+}
+.btn-download-main:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: #ff5722;
+  color: white;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.btn-download-main i {
+  font-size: 30px;
 }
 
 .btn-download {
@@ -221,36 +228,26 @@ body {
   gap: 12px;
   background: white;
   color: #1565c0;
-  padding: 18px 42px;
+  padding: 14px 32px;
   border-radius: 60px;
-  font-weight: 800;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 18px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-  animation: fadeInUp 0.8s ease 1s backwards;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
-
 .btn-download:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transform: translateY(-3px);
   background: #f8f9ff;
 }
 
-.btn-download i {
-  font-size: 28px;
-}
-
-/* ========== SECTIONS ========== */
 section {
   padding: 80px 20px;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .section-title {
   text-align: center;
   font-size: 36px;
@@ -261,7 +258,6 @@ section {
   display: inline-block;
   width: 100%;
 }
-
 .section-title::after {
   content: '';
   display: block;
@@ -271,7 +267,6 @@ section {
   margin: 15px auto 0;
   border-radius: 4px;
 }
-
 .section-subtitle {
   text-align: center;
   font-size: 18px;
@@ -279,12 +274,10 @@ section {
   margin-bottom: 50px;
 }
 
-/* ========== CARDS GRID ========== */
 .grid-2, .grid-3, .grid-4 {
   display: grid;
   gap: 30px;
 }
-
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
@@ -297,15 +290,11 @@ section {
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   border: 1px solid rgba(30,136,229,0.1);
-  animation: fadeInUp 0.8s ease backwards;
 }
-
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  border-color: rgba(30,136,229,0.3);
 }
-
 .card-icon {
   font-size: 55px;
   margin-bottom: 20px;
@@ -314,175 +303,148 @@ section {
   background-clip: text;
   color: transparent;
 }
-
 .card h3 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #1a2a3a;
 }
 
-.card p {
-  color: #5a6e7c;
-  line-height: 1.7;
-}
-
-/* ========== FREE PLAN HIGHLIGHT ========== */
-.free-plan-section {
-  background: linear-gradient(135deg, #1e88e5, #0d47a1);
-  color: white;
+/* خطة مجانية محدودة + باقات */
+.pricing-section {
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
   border-radius: 40px;
   margin: 40px auto;
   padding: 60px 40px;
-  text-align: center;
-  box-shadow: 0 25px 50px rgba(13,71,161,0.3);
 }
-
-.free-plan-section h2 {
-  font-size: 40px;
+.pricing-card {
+  background: white;
+  border-radius: 32px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+.pricing-card h3 {
+  font-size: 28px;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
-
-.free-plan-section .big-free {
-  font-size: 70px;
+.price {
+  font-size: 48px;
   font-weight: 900;
-  background: linear-gradient(135deg, #ffd54f, #ff9800);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
+  color: #0d47a1;
   margin: 20px 0;
 }
-
-.free-plan-section p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  opacity: 0.95;
+.price small {
+  font-size: 18px;
+  font-weight: 400;
 }
-
-.feature-list {
+.features-list {
+  list-style: none;
+  text-align: right;
+  margin: 20px 0;
+  flex-grow: 1;
+}
+.features-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+  align-items: center;
+  gap: 10px;
 }
-
-.feature-list span {
-  background: rgba(255,255,255,0.2);
-  padding: 8px 20px;
+.features-list li i.fa-check-circle {
+  color: #1e88e5;
+}
+.features-list li i.fa-times-circle {
+  color: #ccc;
+}
+.btn-price {
+  background: #0d47a1;
+  color: white;
+  padding: 14px;
   border-radius: 40px;
-  font-size: 14px;
-  backdrop-filter: blur(5px);
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  transition: 0.3s;
 }
-
-/* ========== STATS ========== */
+.btn-price:hover {
+  background: #ff9800;
+  transform: scale(1.02);
+}
+.free-plan-card {
+  border: 2px solid #ff9800;
+  background: #fffaf2;
+}
 .stats {
   display: flex;
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 50px;
 }
-
 .stat-item {
   text-align: center;
 }
-
 .stat-number {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 800;
   color: #1e88e5;
 }
-
 .stat-label {
-  font-size: 16px;
-  color: #5a6e7c;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
 }
-
-/* ========== CTA ========== */
 .cta-section {
   background: linear-gradient(135deg, #0d47a1, #1e88e5);
   text-align: center;
   padding: 80px 20px;
-  position: relative;
 }
-
 .cta-section h2 {
   color: white;
   font-size: 38px;
-  margin-bottom: 20px;
 }
-
 .cta-section p {
   color: rgba(255,255,255,0.9);
   font-size: 20px;
   margin-bottom: 35px;
 }
-
-.btn-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: #ff9800;
-  color: #fff;
-  padding: 18px 45px;
-  border-radius: 60px;
-  font-weight: 800;
-  font-size: 22px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.btn-cta:hover {
-  transform: scale(1.05);
-  background: #ff5722;
-}
-
-/* ========== FOOTER ========== */
 footer {
   background: #0a2a44;
   color: #fff;
   text-align: center;
   padding: 40px 20px;
 }
-
 .social-links {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-bottom: 25px;
 }
-
 .social-links a {
   color: white;
   font-size: 24px;
   transition: 0.3s;
   opacity: 0.7;
 }
-
 .social-links a:hover {
   opacity: 1;
   transform: translateY(-3px);
 }
-
-/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .header h1 { font-size: 32px; }
-  .header .subtitle { font-size: 18px; }
   .section-title { font-size: 28px; }
-  .free-plan-section h2 { font-size: 28px; }
-  .free-plan-section .big-free { font-size: 45px; }
-  .btn-download, .btn-cta { padding: 14px 28px; font-size: 16px; }
-  .grid-3, .grid-2, .grid-4 { gap: 20px; }
-  .card { padding: 25px 20px; }
-}
-
-@media (max-width: 480px) {
-  .header h1 { font-size: 26px; }
-  .offer-badge { font-size: 16px; padding: 8px 20px; }
+  .price { font-size: 36px; }
+  .btn-download-main { font-size: 18px; padding: 14px 28px; }
+  .grid-3, .grid-2 { gap: 20px; }
 }
 </style>
 </head>
@@ -493,156 +455,136 @@ footer {
   <a href="ar.html" style="background:white; color:#1565c0;">🇩🇿 العربية</a>
 </div>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-content">
     <img src="images/logo_app.png" alt="Komondi" class="logo">
-    <h1> ضاعف مبيعاتك… بدون تعقيد <br>ودّع ضياع الزبائن… وابدأ البيع الذكي</h1>
+    <h1>ضاعف مبيعاتك… بدون تعقيد <br>ودّع ضياع الزبائن… وابدأ البيع الذكي</h1>
     <p class="subtitle">كوموندي – الحل الذكي للموزعين وتجار الجملة</p>
     <div class="offer-badge">
-      <i class="fas fa-gift"></i> جرب التطبيق و استفد من الخطة المجانية!
+      <i class="fas fa-star"></i> ابتداءاً من 0 دج للخطة الأساسية
     </div>
-    <p class="offer-text">✨ خلي الزبون يطلب غير من هاتفه بلا ما تشقى ليه ✨</p>
-   <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-download" onclick="fbq('track', 'Lead', {content_name: 'تطبيق كوموندي', content_category: 'تحميل تطبيق'});">
-    <i class="fab fa-google-play"></i> جرب التطبيق الآن
-</a>
+    <!-- زر جلب الانتباه الأساسي -->
+    <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-download-main" onclick="fbq('track', 'Lead', {content_name: 'تطبيق كوموندي', content_category: 'تحميل تطبيق'});">
+      <i class="fab fa-google-play"></i> جرب التطبيق الآن
     </a>
+    <p class="offer-text" style="margin-top:25px;">✨ حمّل التطبيق واختر خطتك المناسبة ✨</p>
   </div>
 </header>
 
-<!-- SECTION: المشكلة والحل -->
+<!-- المشكلة والحل -->
 <section>
   <div class="container">
-    <h2 class="section-title">تعبت من الطلبيات المبعثرة وقلة المبيعات؟</h2>
-    <p class="section-subtitle">طلبيات بالهاتف والواتساب والكراس – كل شيء مشتت والأخطاء كثيرة</p>
+    <h2 class="section-title">تعبت من الطلبيات المبعثرة؟</h2>
+    <p class="section-subtitle">نظم مبيعاتك إحترافياً مع كوموندي</p>
     <div class="grid-2">
-      <div class="card" style="animation-delay:0.1s;">
+      <div class="card">
         <div class="card-icon"><i class="fas fa-times-circle"></i></div>
         <h3>المشكلة</h3>
-        <p>📝 طلبيات بالكراس تضيع<br>
-        📱 واتساب – رسائل تختفي وتضيع<br>
-        ❌ أخطاء في الكميات والأسعار<br>
-        ⏱️ وقت ضائع في تنظيم الأوراق<br>
-        📊 صعوبة في معرفة المبيعات والإحصائيات</p>
+        <p>📝 طلبيات بالكراس تضيع<br>📱 واتساب – رسائل تختفي<br>❌ أخطاء في الكميات والأسعار<br>⏱️ وقت ضائع في التنظيم</p>
       </div>
-      <div class="card" style="animation-delay:0.2s;">
+      <div class="card">
         <div class="card-icon"><i class="fas fa-check-circle"></i></div>
         <h3>الحل مع كوموندي</h3>
-        <p>✅ كل الطلبيات في مكان واحد منظم<br>
-        ✅ تحديث فوري للأسعار والستوك<br>
-        ✅ وصول سريع للطلبيات للموزع<br>
-        ✅ إحصائيات دقيقة للمبيعات والأرباح<br>
-        ✅ توفير وقت وجهد كبيرين</p>
+        <p>✅ كل الطلبيات منظمة<br>✅ تحديث فوري للستوك<br>✅ إحصائيات دقيقة<br>✅ توفير وقت وجهد</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION: الخطة المجانية (محفزة جداً) -->
-<section class="free-plan-section container">
-  <h2>🎁 خطة مجانية غير محدودة 🎁</h2>
-  <div class="big-free">مجاناً 100%</div>
-  <p><strong>استفد من كل مزايا التطبيق الحالية بدون دفع ديانر واحد!</strong><br>
-  لا وقت محدد – استمر مجاناً  مع الخطة الحالية</p>
-  <div class="feature-list">
-    <span>✅ إضافة منتجات  </span>
-    <span>✅ إضافة بائعين (مندوبين)</span>
-    <span>✅ إدارة الطلبيات</span>
-    <span>✅ طباعة فواتير وتيكت</span>
-    <span>✅ عروض ترويجية</span>
-    <span>✅ إحصائيات شاملة</span>
+<!-- خطط الأسعار الجديدة (مجانية محدودة + مدفوعة) -->
+<section class="pricing-section container">
+  <h2 class="section-title">🚀 اختر الخطة المناسبة لعملك</h2>
+  <p class="section-subtitle">ابدأ مجاناً ثم طور مع نمو أعمالك</p>
+  <div class="grid-2" style="gap: 40px;">
+    <!-- خطة مجانية محدودة -->
+    <div class="pricing-card free-plan-card">
+      <h3><i class="fas fa-gift" style="color:#ff9800;"></i> الخطة المجانية</h3>
+      <div class="price">0 <small>دج / شهرياً</small></div>
+      <ul class="features-list">
+        <li><i class="fas fa-check-circle"></i> 1 بائع / مندوب</li>
+        <li><i class="fas fa-check-circle"></i> 50 منتج كحد أقصى</li>
+        <li><i class="fas fa-check-circle"></i> عرض ترويجي واحد نشط</li>
+        <li><i class="fas fa-check-circle"></i> فواتير وتيكت أساسية</li>
+        <li><i class="fas fa-times-circle" style="color:#ccc;"></i> تطبيق الويب (غير متوفر)</li>
+        <li><i class="fas fa-times-circle" style="color:#ccc;"></i> الظهور في تطبيق الزبائن</li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-price" onclick="fbq('track', 'Lead');">ابدأ مجاناً</a>
+    </div>
+
+    <!-- خطة مدفوعة بريميوم -->
+    <div class="pricing-card" style="background: linear-gradient(145deg, #ffffff, #f0f4ff); border: 1px solid #1e88e5;">
+      <h3><i class="fas fa-crown" style="color:#ff9800;"></i> الخطة الاحترافية</h3>
+      <div class="price">290 <small>دج / شهرياً</small></div>
+      <ul class="features-list">
+        <li><i class="fas fa-check-circle"></i> بائعين غير محدودين</li>
+        <li><i class="fas fa-check-circle"></i> منتجات غير محدودة</li>
+        <li><i class="fas fa-check-circle"></i> تطبيق الويب (لوحة تحكم كاملة)</li>
+        <li><i class="fas fa-check-circle"></i> عروض ترويجية غير محدودة</li>
+        <li><i class="fas fa-check-circle"></i> الظهور مع الأوائل في تطبيق الزبائن</li>
+        <li><i class="fas fa-check-circle"></i> إحصائيات متقدمة + دعم VIP</li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-price" style="background:#ff9800;" onclick="fbq('track', 'Lead');">اشترك الآن</a>
+    </div>
   </div>
 </section>
 
-<!-- SECTION: مزايا للموزعين -->
+<!-- إحصائيات حقيقية (500+ موزع، 1000+ زبون) -->
+<section>
+  <div class="container">
+    <div class="stats">
+      <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">موزع مشترك</div></div>
+      <div class="stat-item"><div class="stat-number">1,000+</div><div class="stat-label">زبون نشط في التطبيق</div></div>
+      <div class="stat-item"><div class="stat-number">⭐ 4.8</div><div class="stat-label">تقييم المستخدمين</div></div>
+      <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">دعم فني</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- مزايا للموزعين -->
 <section>
   <div class="container">
     <h2 class="section-title">🚀 للموزع وتاجر الجملة</h2>
-    <p class="section-subtitle">سيّر أعمالك بكل احترافية وسهولة</p>
     <div class="grid-3">
-      <div class="card" style="animation-delay:0.1s;">
-        <div class="card-icon"><i class="fas fa-boxes"></i></div>
-        <h3>إدارة المنتجات</h3>
-        <p>أضف منتجاتك بالصور والأسعار، نظمها بالأقسام والماركات. تحكم كامل في الستوك والأسعار</p>
-      </div>
-      <div class="card" style="animation-delay:0.2s;">
-        <div class="card-icon"><i class="fas fa-users"></i></div>
-        <h3>إضافة البائعين</h3>
-        <p>أضف مندوبي مبيعات أو بائعين. كل بائع له صلاحياته ويمكنه إضافة زبائن وجلب طلبيات</p>
-      </div>
-      <div class="card" style="animation-delay:0.3s;">
-        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>إحصائيات شاملة</h3>
-        <p>تقارير دقيقة عن المبيعات، الأرباح، المنتجات الأكثر طلباً، والعملاء الأوفياء</p>
-      </div>
-      <div class="card" style="animation-delay:0.4s;">
-        <div class="card-icon"><i class="fas fa-tags"></i></div>
-        <h3>عروض ترويجية</h3>
-        <p>أنشئ عروض خاصة، تخفيضات موسمية لجذب الزبائن وزيادة المبيعات</p>
-      </div>
-      <div class="card" style="animation-delay:0.5s;">
-        <div class="card-icon"><i class="fas fa-print"></i></div>
-        <h3>طباعة الفواتير والتيكت</h3>
-        <p>اطبع وصل تسليم، تيكت حراري، وفواتير احترافية للزبائن بطريقة سريعة</p>
-      </div>
-      <div class="card" style="animation-delay:0.6s;">
-        <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
-        <h3>الزبائن يطلبون بأنفسهم</h3>
-        <p>زبائنك يشوفو المنتجات ويطلبون مباشرة من هواتفهم – بدون تعب مندوبين</p>
-      </div>
+      <div class="card"><div class="card-icon"><i class="fas fa-boxes"></i></div><h3>إدارة المنتجات</h3><p>أضف منتجاتك بالصور والأسعار، تحكم كامل في الستوك.</p></div>
+      <div class="card"><div class="card-icon"><i class="fas fa-users"></i></div><h3>إضافة البائعين</h3><p>أضف مندوبين وحدد صلاحياتهم (حسب خطتك).</p></div>
+      <div class="card"><div class="card-icon"><i class="fas fa-chart-line"></i></div><h3>إحصائيات دقيقة</h3><p>تقارير المبيعات والأرباح والمنتجات الأكثر طلباً.</p></div>
+      <div class="card"><div class="card-icon"><i class="fas fa-tags"></i></div><h3>عروض ترويجية</h3><p>عروض خاصة وتخفيضات لجذب الزبائن.</p></div>
+      <div class="card"><div class="card-icon"><i class="fas fa-print"></i></div><h3>طباعة فواتير وتيكت</h3><p>وصل تسليم وتيكت حراري وفواتير احترافية.</p></div>
+      <div class="card"><div class="card-icon"><i class="fas fa-mobile-alt"></i></div><h3>الزبائن يطلبون بأنفسهم</h3><p>في الخطة المدفوعة، يظهر متجرك للأوائل في تطبيق الزبائن.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SECTION: مزايا للتاجر (زبون الموزع) -->
+<!-- مزايا للتاجر -->
 <section style="background: #eef2ff;">
   <div class="container">
     <h2 class="section-title">🛍️ للتاجر (صاحب المحل)</h2>
-    <p class="section-subtitle">اطلب بسهولة من أقرب موزع ومن غير ما تتحرك من محلك</p>
     <div class="grid-3">
-      <div class="card" style="animation-delay:0.1s;">
-        <div class="card-icon"><i class="fas fa-store"></i></div>
-        <h3>اكتشف الموزعين</h3>
-        <p>شوف أقرب الموزعين ليك وتابعهم، اطلب المنتجات بكل سهولة</p>
-      </div>
-      <div class="card" style="animation-delay:0.2s;">
-        <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
-        <h3>طلب سريع</h3>
-        <p>تصفح المنتجات، شوف الأسعار والصور، واطلب مباشرة من هاتفك</p>
-      </div>
-      <div class="card" style="animation-delay:0.3s;">
-        <div class="card-icon"><i class="fas fa-history"></i></div>
-        <h3>تتبع الطلبيات</h3>
-        <p>عرف اين طلبيتك، ومتى تصل، وحالة كل طلبية بكل دقة</p>
-      </div>
+      <div class="card"><div class="card-icon"><i class="fas fa-store"></i></div><h3>اكتشف الموزعين</h3><p>شوف أقرب الموزعين وتابعهم واطلب بسهولة.</p></div>
+      <div class="card"><div class="card-icon"><i class="fas fa-shopping-cart"></i></div><h3>طلب سريع</h3><p>تصفح الأسعار والصور واطلب مباشرة.</p></div>
+      <div class="card"><div class="card-icon"><i class="fas fa-history"></i></div><h3>تتبع الطلبيات</h3><p>عرف حالة طلبيتك بدقة.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SECTION: الميزات الكاملة + أرقام -->
+<!-- كل الميزات -->
 <section>
   <div class="container">
     <h2 class="section-title">✨ كل الميزات في مكان واحد ✨</h2>
     <div class="grid-4">
-      <div class="card"><i class="fas fa-database card-icon"></i><h3>منتجات غير محدودة</h3></div>
-      <div class="card"><i class="fas fa-user-plus card-icon"></i><h3>بائعين غير محدودين</h3></div>
+      <div class="card"><i class="fas fa-database card-icon"></i><h3>منتجات غير محدودة*</h3><p style="font-size:12px;">*في الخطة المدفوعة</p></div>
+      <div class="card"><i class="fas fa-user-plus card-icon"></i><h3>بائعين غير محدودين*</h3><p style="font-size:12px;">*في الخطة المدفوعة</p></div>
       <div class="card"><i class="fas fa-chart-pie card-icon"></i><h3>إحصائيات فورية</h3></div>
       <div class="card"><i class="fas fa-percent card-icon"></i><h3>عروض وخصومات</h3></div>
       <div class="card"><i class="fas fa-receipt card-icon"></i><h3>فواتير وتيكت</h3></div>
       <div class="card"><i class="fas fa-bell card-icon"></i><h3>إشعارات فورية</h3></div>
-      <div class="card"><i class="fas fa-users card-icon"></i><h3>إدارة العملاء</h3></div>
-      <div class="card"><i class="fas fa-truck card-icon"></i><h3>تنظيم التوصيل</h3></div>
-    </div>
-    
-    <div class="stats">
-      <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">مجاني حالياً</div></div>
-      <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">خدمة متصلة</div></div>
-      <div class="stat-item"><div class="stat-number">📱</div><div class="stat-label">متوفر للجميع</div></div>
+      <div class="card"><i class="fas fa-globe card-icon"></i><h3>تطبيق الويب*</h3><p style="font-size:12px;">*للمشتركين المدفوع</p></div>
+      <div class="card"><i class="fas fa-chart-simple card-icon"></i><h3>ظهور في تطبيق الزبائن</h3></div>
     </div>
   </div>
 </section>
 
-<!-- SECTION: صور التطبيق -->
+<!-- صور التطبيق -->
 <section style="background: #eef2ff;">
   <div class="container">
     <h2 class="section-title">📱 شوف التطبيق بنفسك</h2>
@@ -654,21 +596,20 @@ footer {
   </div>
 </section>
 
-<!-- SECTION CTA -->
+<!-- CTA قوية -->
 <section class="cta-section">
-  <h2>🚀 راك حاب تطور خدمتك وتزيد مبيعاتك؟</h2>
-  <p>جرّب كوموندي اليوم مجاناً – بدون أي التزام</p>
-  <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-download" onclick="fbq('track', 'Lead', {content_name: 'تطبيق كوموندي', content_category: 'تحميل تطبيق'});">
-    <i class="fab fa-google-play"></i> حمّل التطبيق الآن
-</a>
+  <h2>🚀 جاهز تطور خدمتك وتزيد مبيعاتك؟</h2>
+  <p>اختر خطتك الآن وابدأ التحول الرقمي لأعمالك</p>
+  <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-download" style="background:#ff9800; color:#1a2a3a; font-size:22px;" onclick="fbq('track', 'Lead');">
+    <i class="fab fa-google-play"></i> حمّل التطبيق واختر خطتك
   </a>
 </section>
 
-<!-- SECTION: اتصل بنا -->
+<!-- اتصل بنا -->
 <section>
   <div class="container">
     <h2 class="section-title">📞 تواصل معنا</h2>
-    <p class="section-subtitle">أي سؤال أو استفسار، حنا هنا باش نعاونوك</p>
+    <p class="section-subtitle">أي سؤال عن الخطط أو الميزات، حنا هنا باش نعاونوك</p>
     <div class="grid-2" style="max-width:500px; margin:0 auto;">
       <div class="card">
         <i class="fas fa-envelope card-icon"></i>
@@ -684,7 +625,6 @@ footer {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="social-links">
     <a href="https://www.facebook.com/komondi" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -692,7 +632,7 @@ footer {
     <a href="https://wa.me/213551682179" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
   <p>© 2025 Komondi – جميع الحقوق محفوظة</p>
-  <p style="font-size:12px; opacity:0.6; margin-top:10px;">تطبيق جزائري 100% – سهّل مبيعاتك وطلبياتك</p>
+  <p style="font-size:12px; opacity:0.6;">تطبيق جزائري 100% – خطط تبدأ من 290 دج فقط</p>
 </footer>
 
 </body>
