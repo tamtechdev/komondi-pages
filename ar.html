@@ -463,9 +463,23 @@ footer {
     <!-- عرض سعر ثابت بدون حركة (لا أنيميشن نبض) -->
    
     <!-- زر جذب قوي مع حركة pulse مستمرة لجذب المستخدم -->
-    <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi" class="btn-download-main" onclick="fbq('track', 'Lead', {content_name: 'تطبيق كوموندي', content_category: 'تحميل تطبيق'});">
-      <i class="fab fa-google-play"></i> جرب التطبيق الآن
-    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.dzstartup.komondi"
+   class="btn-download-main"
+   onclick="trackDownload(event)">
+   <i class="fab fa-google-play"></i> جرب التطبيق الآن
+</a>
+
+<script>
+function trackDownload(e) {
+  e.preventDefault();
+
+  fbq('track', 'Lead');
+
+  setTimeout(function() {
+    window.location.href = "https://play.google.com/store/apps/details?id=com.dzstartup.komondi";
+  }, 500);
+}
+</script>
     <p class="offer-text" style="margin-top:25px;">✨ أنشا حساب موزع مورد وتميز عن منافسيك ✨</p>
   </div>
 </header>
