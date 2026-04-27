@@ -473,21 +473,15 @@ footer {
 function trackDownload(e) {
   e.preventDefault();
 
-  // تسجيل الأحداث
   fbq('track', 'Purchase', {
     value: 0.00,
-    currency: 'DZD'
+    currency: 'DZD',
+    content_name: 'App_Install_Only'
   });
 
-  fbq('track', 'Lead', {
-    content_name: 'تحميل التطبيق',
-    content_category: 'komondi'
-  });
-
-  // تحويل بعد مهلة
   setTimeout(function() {
     window.location.href = "https://play.google.com/store/apps/details?id=com.dzstartup.komondi";
-  }, 600); // زيدناها شوية باش نضمن الإرسال
+  }, 300);
 }
 </script>
     <p class="offer-text" style="margin-top:25px;">✨ أنشا حساب موزع مورد وتميز عن منافسيك ✨</p>
