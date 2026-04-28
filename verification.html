@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirection vers Komondi...</title>
+    <script>
+        // محاولة فتح التطبيق فورًا
+        window.location.href = "komondiapp://verification" + window.location.search;
+        
+        // إذا لم ينجح (التطبيق غير مثبت)، انتظر ثم اذهب إلى المتجر
+        setTimeout(function() {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.dzstartup.komondi";
+        }, 500);
+    </script>
+</head>
+<body>
+    <p>جاري تحويلك إلى تطبيق Komondi...</p>
+    <p>إذا لم يتم فتح التطبيق تلقائيًا، <a href="komondiapp://verification">انقر هنا</a>.</p>
+</body>
+</html>
