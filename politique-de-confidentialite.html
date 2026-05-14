@@ -102,6 +102,16 @@ No banking or payment card information is collected.</p>
   <p>All data is stored on Firebase servers (Auth, Realtime Database, Storage).  
   We do not sell or rent user data and only share it with essential service providers or legal authorities when necessary.</p>
 
+  <h3>10. Bluetooth Permissions (Printing)</h3>
+<p>Komondi requires the following Bluetooth permissions to connect to thermal Bluetooth printers for printing invoices, order tickets, and delivery notes:</p>
+<ul>
+  <li><strong>BLUETOOTH_CONNECT</strong> – to establish a connection with the printer.</li>
+  <li><strong>BLUETOOTH_SCAN</strong> – to discover and pair with available Bluetooth printers (Android 12+).</li>
+  <li><strong>BLUETOOTH / BLUETOOTH_ADMIN</strong> – for older Android versions (up to Android 11).</li>
+</ul>
+<p><strong>Important:</strong> These permissions are used <strong>exclusively for printing receipts and invoices</strong>. Komondi <strong>does not</strong> and <strong>will never</strong> use Bluetooth to collect device location,
+  track users, or access any personal data outside the printing functionality. The permission <code>android:usesPermissionFlags="neverForLocation"</code> is declared to confirm this.</p>
+
   <h3>4. Cookies</h3>
   <p>The app may use cookies to enhance user experience and manage accounts.  
   You can disable them in your device or Google account settings.</p>
@@ -189,7 +199,15 @@ Aucune donnée bancaire ou information de carte de paiement n’est collectée.<
   Nous prenons toutes les précautions nécessaires pour protéger vos informations contre tout accès, utilisation ou divulgation non autorisés.</p>
   <p>Toutes les données sont hébergées sur les serveurs Firebase (Auth, Realtime Database, Storage).  
   Nous ne vendons ni ne louons les données des utilisateurs, et ne les partageons qu’avec les prestataires essentiels ou les autorités légales si nécessaire.</p>
-
+<h3>10. Autorisations Bluetooth (Impression)</h3>
+<p>Komondi nécessite les autorisations Bluetooth suivantes pour se connecter aux imprimantes thermiques Bluetooth et imprimer les factures, tickets de commande et bons de livraison :</p>
+<ul>
+  <li><strong>BLUETOOTH_CONNECT</strong> – pour établir une connexion avec l’imprimante.</li>
+  <li><strong>BLUETOOTH_SCAN</strong> – pour découvrir et appairer les imprimantes Bluetooth disponibles (Android 12+).</li>
+  <li><strong>BLUETOOTH / BLUETOOTH_ADMIN</strong> – pour les anciennes versions d’Android (jusqu’à Android 11).</li>
+</ul>
+<p><strong>Important :</strong> Ces autorisations sont utilisées <strong>exclusivement pour l’impression des reçus et factures</strong>. Komondi <strong>n’utilise pas</strong> et <strong>n’utilisera jamais</strong> le Bluetooth pour collecter la localisation de l’appareil, suivre les utilisateurs ou accéder à des données personnelles en dehors de la fonction d’impression.
+  La déclaration <code>android:usesPermissionFlags="neverForLocation"</code> est présente pour le confirmer.</p>
 
   <h3>4. Cookies</h3>
   <p>L’application peut utiliser des cookies pour améliorer l’expérience utilisateur et gérer les comptes.  
@@ -280,7 +298,15 @@ Aucune donnée bancaire ou information de carte de paiement n’est collectée.<
   نتخذ جميع الاحتياطات اللازمة لحماية بياناتك من الوصول أو الاستخدام أو الكشف غير المصرح به.</p>
   <p>يتم حفظ البيانات على خوادم Firebase (Auth, Realtime Database, Storage).  
   لا نبيع أو نؤجر بيانات المستخدمين، وقد نشاركها فقط مع مزودي الخدمات الضروريين أو السلطات القانونية.</p>
-  
+  <h3>10. أذونات البلوتوث (الطباعة)</h3>
+<p>يطلب تطبيق Komondi أذونات البلوتوث التالية للاتصال بالطابعات الحرارية عبر البلوتوث لطباعة الفواتير، تذاكر الطلبات، وإيصالات التسليم:</p>
+<ul>
+  <li><strong>BLUETOOTH_CONNECT</strong> – لإنشاء اتصال مع الطابعة.</li>
+  <li><strong>BLUETOOTH_SCAN</strong> – لاكتشاف الطابعات المتاحة والاقتران بها (Android 12+).</li>
+  <li><strong>BLUETOOTH / BLUETOOTH_ADMIN</strong> – للإصدارات القديمة من أندرويد (حتى Android 11).</li>
+</ul>
+<p><strong>ملاحظة مهمة:</strong> تُستخدم هذه الأذونات <strong>حصرياً لطباعة الإيصالات والفواتير</strong>. تطبيق Komondi <strong>لا يستخدم</strong> ولن يستخدم أبداً تقنية البلوتوث لجمع موقع الجهاز أو تتبع المستخدمين أو الوصول إلى أي بيانات شخصية خارج وظيفة الطباعة. 
+  تم إعلان الخاصية <code>android:usesPermissionFlags="neverForLocation"</code> لتأكيد ذلك.</p>
   <h3>4. الكوكيز (Cookies)</h3>
   <p>قد يستخدم التطبيق ملفات تعريف الارتباط لتحسين تجربة المستخدم وإدارة الحساب.  
   يمكنك تعطيلها من إعدادات جهازك أو حساب Google.</p>
